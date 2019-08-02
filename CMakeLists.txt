@@ -120,8 +120,7 @@ find_package(PkgConfig)
 catkin_package(
   INCLUDE_DIRS include
   CATKIN_DEPENDS geometry_msgs image_transport roscpp sensor_msgs std_msgs message_runtime cv_bridge tf nodelet pluginlib apriltag_ros
-  DEPENDS OpenCV  
-  ${PROJECT_NAME}_continuous_detector 
+  DEPENDS OpenCV   
 )
 
 ###########
@@ -133,21 +132,16 @@ catkin_package(
 include_directories(
   ${catkin_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIRS}
-  ${OpenCV_INCLUDE_DIRS} 
-  $(apriltag_ros)
+  ${OpenCV_INCLUDE_DIRS}  
   include
 )
-
-message("-----------------------",$(apriltag_ros),"------------",${OpenCV_INCLUDE_DIRS} )
+ 
 include_directories(${apriltag_INCLUDE_DIRS}/apriltag)
 link_directories(${apriltag_LIBDIR})
-
-add_library(${PROJECT_NAME}_continuous_detector src/cup_continuous_detector.cpp src/fast_find_ellipse_detector.cpp src/common.cpp src/EllipseDetectorYaed.cpp)
-target_link_libraries(${PROJECT_NAME}_continuous_detector ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${apriltag_ros_LIBRARIES})
-
-add_executable(${PROJECT_NAME}_continuous_node src/cup_find_ros_continuous_node.cpp)
+ 
+add_executable(${PROJECT_NAME}_continuous_node src/cup_find_ros_continuous_node.cpp  src/fast_find_ellipse_detector.cpp src/common.cpp src/EllipseDetectorYaed.cpp)
 add_dependencies(${PROJECT_NAME}_continuous_node ${PROJECT_NAME}_generate_messages_cpp)
-target_link_libraries(${PROJECT_NAME}_continuous_node ${PROJECT_NAME}_continuous_detector ${catkin_LIBRARIES})
+target_link_libraries(${PROJECT_NAME}_continuous_node  ${catkin_LIBRARIES})
  
 #############
 ## Install ##
@@ -157,14 +151,9 @@ target_link_libraries(${PROJECT_NAME}_continuous_node ${PROJECT_NAME}_continuous
 
 install(DIRECTORY launch config
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
-install(FILES nodelet_plugins.xml
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
+) 
 
-
-install(TARGETS 
-  ${PROJECT_NAME}_continuous_detector 
+install(TARGETS  
   ${PROJECT_NAME}_continuous_node  
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
