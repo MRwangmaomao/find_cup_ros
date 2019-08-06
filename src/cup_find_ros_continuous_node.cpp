@@ -28,14 +28,6 @@
  * policies, either expressed or implied, of the California Institute of
  * Technology.
  */
-
-#include <ros/ros.h>
-  
-#include "apriltag_ros/AprilTagDetection.h"
-#include "apriltag_ros/AprilTagDetectionArray.h"
-
-#include "find_cup_ros/fast_find_ellipse_detector.h"
-
 #include <ros/ros.h>
 #include <ros/console.h>
 #include <cv_bridge/cv_bridge.h>
@@ -56,6 +48,13 @@
 #include <image_transport/image_transport.h>
 #include <sensor_msgs/image_encodings.h>
 #include <tf/transform_broadcaster.h> 
+
+  
+#include "apriltag_ros/AprilTagDetection.h"
+#include "apriltag_ros/AprilTagDetectionArray.h"
+
+#include "find_cup_ros/fast_find_ellipse_detector.h"
+
 #include "image_geometry/pinhole_camera_model.h"
 
 using namespace Eigen;
@@ -72,7 +71,7 @@ image_transport::CameraSubscriber camera_image_subscriber_; // 原始图像接�
 ros::Publisher cup_detections_publisher_; // 发布杯子pose
 ros::Subscriber apriltags_subscriber_; // 接收apriltag消息
 cv::Point2i last_center_; // 上一时刻杯子中心
-
+int tick_num_debug = 0; // 控制打印速度
 
 /**
  * @brief Get the April Tag Option object 参数获取模板函数
@@ -190,8 +189,8 @@ void find_cup_in_four_apriltag(const  cv::Mat & src, std::map<int ,cv::Point2f >
             Eigen::Vector2d b(cup_center_point.x - m_src_array[0].x, cup_center_point.y - m_src_array[0].y);
             Eigen::Vector2d c = a.colPivHouseholderQr().solve(b); 
             Eigen::Vector3d d( m_translation[0] + (m_translation[1]-m_translation[0])*c(0) + (m_translation[2]-m_translation[0])*c(1));
-            ROS_INFO_STREAM("输出三维坐标" << d);
-            std::cout << "OK";
+            ROS_DEBUG_STREAM("输出三维坐标" << d);
+            // std::cout << "OK";
             geometry_msgs::Pose cup_pose;
             //ROS发布杯子的三维坐标消息
             cup_pose.position.x = d(0);
@@ -201,13 +200,13 @@ void find_cup_in_four_apriltag(const  cv::Mat & src, std::map<int ,cv::Point2f >
             cup_pose.orientation.y = temp_q.y();
             cup_pose.orientation.z = temp_q.z();
             cup_pose.orientation.w = temp_q.w();
-            // ROS_INFO_STREAM("x,y");
+            // ROS_DEBUG_STREAM("x,y");
             cup_detections_publisher_.publish(cup_pose); 
         } 
 
-        namedWindow("imshow_image", CV_WINDOW_AUTOSIZE );
-        imshow("imshow_image",image);
-        cvWaitKey(3); 
+        // namedWindow("imshow_image", CV_WINDOW_AUTOSIZE );
+        // imshow("imshow_image",image);
+        // cvWaitKey(3); 
         namedWindow("imshow_src", CV_WINDOW_AUTOSIZE );
         imshow("imshow_src",src);
         cvWaitKey(3); 
@@ -230,11 +229,21 @@ void apriltagsCallback(const apriltag_ros::AprilTagDetectionArray::ConstPtr& tag
  
     if (tag_detections->detections.size() == 0)
     {
-        ROS_WARN_STREAM("No detected tags!");
+        tick_num_debug++;
+        if(tick_num_debug > 80)
+        { 
+            tick_num_debug = 0;
+            ROS_WARN_STREAM("No detected tags!");
+        }
     }
     else if (tag_detections->detections.size() != 4)
     {
-        ROS_WARN_STREAM("detected is not 4 tags!");
+        tick_num_debug++;
+        if(tick_num_debug > 80)
+        { 
+            tick_num_debug = 0;
+            ROS_WARN_STREAM("detected is not 4 tags!");
+        }
     }
     else // 检测到四个二维码
     {
@@ -314,6 +323,9 @@ int main(int argc, char **argv)
   ros::NodeHandle pnh("~");
    
   ROS_INFO_STREAM("--------------------start find cup--------------------------");
+  
+//   ros::console::set_logger_level(ROSCONSOLE_DEFAULT_NAME, ros::console::levels::Debug);
+    ros::console::set_logger_level(ROSCONSOLE_DEFAULT_NAME, ros::console::levels::Info);
   it_ = std::shared_ptr<image_transport::ImageTransport>(
       new image_transport::ImageTransport(nh));
 
