@@ -142,7 +142,12 @@ link_directories(${apriltag_LIBDIR})
 add_executable(${PROJECT_NAME}_continuous_node src/cup_find_ros_continuous_node.cpp  src/fast_find_ellipse_detector.cpp src/common.cpp src/EllipseDetectorYaed.cpp)
 add_dependencies(${PROJECT_NAME}_continuous_node ${PROJECT_NAME}_generate_messages_cpp)
 target_link_libraries(${PROJECT_NAME}_continuous_node  ${catkin_LIBRARIES})
+
+add_executable(${PROJECT_NAME}_general_node src/cup_find_ros_general_node.cpp  src/fast_find_ellipse_detector.cpp src/common.cpp src/EllipseDetectorYaed.cpp)
+add_dependencies(${PROJECT_NAME}_general_node ${PROJECT_NAME}_generate_messages_cpp)
+target_link_libraries(${PROJECT_NAME}_general_node  ${catkin_LIBRARIES})
  
+
 #############
 ## Install ##
 #############

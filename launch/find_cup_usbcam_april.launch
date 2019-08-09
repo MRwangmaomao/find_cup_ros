@@ -4,7 +4,7 @@
   <arg name="node_namespace" default="cup_find" />
   <arg name="camera_name" default="/usb_cam" />
   <arg name="camera_frame" default="camera0" />
-  <arg name="image_topic" default="/image_raw" />
+  <arg name="image_topic" default="image_raw" />
   <arg name="is_continue" default="true" />
 
   <!-- Set parameters --> 
