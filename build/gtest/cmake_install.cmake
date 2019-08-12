@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/wpr/catkin_gpd/src/find_cup_ros/build/gtest/gtest/cmake_install.cmake")
+  include("/home/wpr/catkin_ws/src/find_cup_ros/build/gtest/gtest/cmake_install.cmake")
 
 endif()
 

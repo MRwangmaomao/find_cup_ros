@@ -16,7 +16,7 @@ If you need further details about the code or the algorithm, please contact me a
 
 michele.fornaciari@unimore.it
 
-last update: 23/12/2014
+last update: 12/8/2019
 */
  
 #include "find_cup_ros/fast_find_ellipse_detector.h"
@@ -294,4 +294,172 @@ cv::Point2i OnImage(cv::Mat image)
 	
 	return ellpse_centor;
 }
+
+
+void maxScoreElipseFind(cv::Mat image, cv::Point2i &ellpse_centor, float &diameter)
+{ 
+	
+	Size sz = image.size();
+	if(!image.empty())
+	{
+		// Convert to grayscale
+		Mat1b gray;
+		cvtColor(image, gray, CV_BGR2GRAY);
+
+
+		// Parameters Settings (Sect. 4.2)
+		int		iThLength = 16;
+		float	fThObb = 3.0f;
+		float	fThPos = 1.0f;
+		float	fTaoCenters = 0.05f;
+		int 	iNs = 16;
+		float	fMaxCenterDistance = sqrt(float(sz.width*sz.width + sz.height*sz.height)) * fTaoCenters;
+
+		float	fThScoreScore = 0.4f;
+
+		// Other constant parameters settings. 
+
+		// Gaussian filter parameters, in pre-processing
+		Size	szPreProcessingGaussKernelSize = Size(5, 5);
+		double	dPreProcessingGaussSigma = 1.0;
+
+		float	fDistanceToEllipseContour = 0.1f;	// (Sect. 3.3.1 - Validation)
+		float	fMinReliability = 0.4f;	// Const parameters to discard bad ellipses
+
+
+		// Initialize Detector with selected parameters
+		CEllipseDetectorYaed* yaed = new CEllipseDetectorYaed();
+		yaed->SetParameters(szPreProcessingGaussKernelSize,
+			dPreProcessingGaussSigma,
+			fThPos,
+			fMaxCenterDistance,
+			iThLength,
+			fThObb,
+			fDistanceToEllipseContour,
+			fThScoreScore,
+			fMinReliability,
+			iNs
+			);
+
+
+		// Detect
+		vector<Ellipse> ellsYaed;
+		Mat1b gray2 = gray.clone();
+		yaed->Detect(gray2, ellsYaed);
+
+		vector<double> times = yaed->GetTimes();
+		// std::cout << "--------------------------------" << std::endl;
+		// std::cout << "Execution Time: " << std::endl;
+		// std::cout << "Edge Detection: \t" << times[0] << std::endl;
+		// std::cout << "Pre processing: \t" << times[1] << std::endl;
+		// std::cout << "Grouping:       \t" << times[2] << std::endl;
+		// std::cout << "Estimation:     \t" << times[3] << std::endl;
+		// std::cout << "Validation:     \t" << times[4] << std::endl;
+		// std::cout << "Clustering:     \t" << times[5] << std::endl;
+		// std::cout << "--------------------------------" << std::endl;
+		// std::cout << "Total:	         \t" << yaed->GetExecTime() << std::endl;
+		// std::cout << "--------------------------------" << std::endl;
+
+
+		vector<Ellipse> gt;
+		// LoadGT(gt, filename_minus_ext + ".txt", true); // Prasad is in radians
+
+		Mat3b resultImage = image.clone();
+
+		// Draw GT ellipses
+		for (unsigned i = 0; i < gt.size(); ++i)
+		{
+			Ellipse& e = gt[i];
+			Scalar color(0, 0, 255);
+			ellipse(resultImage, Point(cvRound(e._xc), cvRound(e._yc)), Size(cvRound(e._a), cvRound(e._b)), e._rad*180.0 / CV_PI, 0.0, 360.0, color, 3);
+		}
+
+		yaed->DrawDetectedEllipses(resultImage, ellsYaed);
+
+		Mat3b res = image.clone();
+
+		Evaluate(gt, ellsYaed, fThScoreScore, res);
+
+		// Show the image in a scalable window.
+		namedWindow("Annotated Image", WINDOW_NORMAL);
+		imshow("Annotated Image", resultImage);
+		waitKey(2);
+		
+		int iTopN = 0; 
+		int sz_ell = int(ellsYaed.size()) - 1; // 搜素到的椭圆数量
+		int max_score_index = sz_ell; 
+		double max_score = 0.0;
+		int n = (iTopN == 0) ? sz_ell : min(iTopN, sz_ell); // 遍历的椭圆数量
+		for (int i = 0; i < sz_ell; ++i) 
+		{
+			Ellipse& e = ellsYaed[n - i - 1];
+			if(e._score >= max_score)
+			{
+				max_score_index = n - i - 1;
+				max_score = e._score;
+			} 	
+		}
+		if(sz_ell > 0)
+		{
+			ellpse_centor = cv::Point2i(cvRound(ellsYaed[max_score_index]._xc), cvRound(ellsYaed[max_score_index]._yc));
+			diameter = (ellsYaed[max_score_index]._a > ellsYaed[max_score_index]._b)? ellsYaed[max_score_index]._a : ellsYaed[max_score_index]._b; 
+		} 
+	}
+}
+
+void multiElipseFind(cv::Mat image, vector<Ellipse> ellsYaed)
+{ 
+	cv::Point2i ellpse_centor;
+	
+	Size sz = image.size(); 	
+	if(!image.empty())
+	{
+		// Convert to grayscale
+		Mat1b gray;
+		cvtColor(image, gray, CV_BGR2GRAY);
  
+		// Parameters Settings (Sect. 4.2)
+		int		iThLength = 16;
+		float	fThObb = 3.0f;
+		float	fThPos = 1.0f;
+		float	fTaoCenters = 0.05f;
+		int 	iNs = 16;
+		float	fMaxCenterDistance = sqrt(float(sz.width*sz.width + sz.height*sz.height)) * fTaoCenters;
+
+		float	fThScoreScore = 0.4f;
+
+		// Other constant parameters settings. 
+
+		// Gaussian filter parameters, in pre-processing
+		Size	szPreProcessingGaussKernelSize = Size(5, 5);
+		double	dPreProcessingGaussSigma = 1.0;
+
+		float	fDistanceToEllipseContour = 0.1f;	// (Sect. 3.3.1 - Validation)
+		float	fMinReliability = 0.4f;	// Const parameters to discard bad ellipses
+ 
+		// Initialize Detector with selected parameters
+		CEllipseDetectorYaed* yaed = new CEllipseDetectorYaed();
+		yaed->SetParameters(szPreProcessingGaussKernelSize,
+			dPreProcessingGaussSigma,
+			fThPos,
+			fMaxCenterDistance,
+			iThLength,
+			fThObb,
+			fDistanceToEllipseContour,
+			fThScoreScore,
+			fMinReliability,
+			iNs
+			);
+ 
+		// Detect 
+		Mat1b gray2 = gray.clone();
+		yaed->Detect(gray2, ellsYaed);
+   
+		Mat3b resultImage = image.clone();
+		yaed->DrawDetectedEllipses(resultImage, ellsYaed);
+		// Show the image in a scalable window.
+		namedWindow("Annotated Image", WINDOW_NORMAL);
+		imshow("Annotated Image", resultImage);
+		waitKey(2); 
+	}
+}

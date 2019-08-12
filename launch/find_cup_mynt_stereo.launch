@@ -1,0 +1,24 @@
+ 
+<launch> 
+   
+  <arg name="launch_prefix" default="" /> <!-- set to value="gdbserver localhost:10000" for remote debugging -->
+  <arg name="node_namespace" default="cup_find" />
+  <arg name="camera_name" default="/mynteye" />
+  <arg name="camera_frame" default="mynteye_link" />
+  <arg name="left_image_topic" default="left/image_raw" />
+  <arg name="right_image_topic" default="right/image_raw" />
+  <arg name="is_continue" default="true" />
+
+  <!-- Set parameters --> 
+  
+  <node pkg="find_cup_ros" type="find_cup_ros_stereo_detection_node" name="$(arg node_namespace)" clear_params="true" output="screen" launch-prefix="$(arg launch_prefix)" >
+    <!-- Remap topics from those used in code to those on the ROS network -->
+    <remap from="image_left" to="$(arg camera_name)/$(arg left_image_topic)" />
+    <remap from="image_right" to="$(arg camera_name)/$(arg right_image_topic)" />
+    <remap from="camera_left_info" to="$(arg camera_name)/left/camera_info" />
+    <remap from="camera_right_info" to="$(arg camera_name)/right/camera_info" /> 
+    <param name="camera_frame" type="str" value="$(arg camera_frame)" /> 
+    <param name="is_continue" type="bool" value="$(arg is_continue)" /> 
+  </node>
+ 
+</launch>

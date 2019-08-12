@@ -48,6 +48,11 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "utility": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "csignal": "cpp",
+        "bitset": "cpp",
+        "algorithm": "cpp",
+        "mutex": "cpp",
+        "cfenv": "cpp"
     }
 }

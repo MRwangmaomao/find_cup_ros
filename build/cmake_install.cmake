@@ -1,4 +1,4 @@
-# Install script for directory: /home/wpr/catkin_gpd/src/find_cup_ros
+# Install script for directory: /home/wpr/catkin_ws/src/find_cup_ros
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -51,7 +51,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/wpr/catkin_gpd/src/find_cup_ros/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -63,7 +63,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/wpr/catkin_gpd/src/find_cup_ros/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/installspace/env.sh")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -75,7 +75,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/wpr/catkin_gpd/src/find_cup_ros/build/catkin_generated/installspace/setup.bash")
+file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/installspace/setup.bash")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -87,7 +87,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/wpr/catkin_gpd/src/find_cup_ros/build/catkin_generated/installspace/setup.sh")
+file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/installspace/setup.sh")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -99,7 +99,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/wpr/catkin_gpd/src/find_cup_ros/build/catkin_generated/installspace/setup.zsh")
+file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/installspace/setup.zsh")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -111,28 +111,28 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/wpr/catkin_gpd/src/find_cup_ros/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/wpr/catkin_gpd/src/find_cup_ros/build/catkin_generated/installspace/find_cup_ros.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/installspace/find_cup_ros.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/find_cup_ros/cmake" TYPE FILE FILES
-    "/home/wpr/catkin_gpd/src/find_cup_ros/build/catkin_generated/installspace/find_cup_rosConfig.cmake"
-    "/home/wpr/catkin_gpd/src/find_cup_ros/build/catkin_generated/installspace/find_cup_rosConfig-version.cmake"
+    "/home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/installspace/find_cup_rosConfig.cmake"
+    "/home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/installspace/find_cup_rosConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/find_cup_ros" TYPE FILE FILES "/home/wpr/catkin_gpd/src/find_cup_ros/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/find_cup_ros" TYPE FILE FILES "/home/wpr/catkin_ws/src/find_cup_ros/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/find_cup_ros" TYPE DIRECTORY FILES
-    "/home/wpr/catkin_gpd/src/find_cup_ros/launch"
-    "/home/wpr/catkin_gpd/src/find_cup_ros/config"
+    "/home/wpr/catkin_ws/src/find_cup_ros/launch"
+    "/home/wpr/catkin_ws/src/find_cup_ros/config"
     )
 endif()
 
@@ -143,12 +143,12 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/find_cup_ros/find_cup_ros_continuous_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/find_cup_ros" TYPE EXECUTABLE FILES "/home/wpr/catkin_gpd/src/find_cup_ros/build/devel/lib/find_cup_ros/find_cup_ros_continuous_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/find_cup_ros" TYPE EXECUTABLE FILES "/home/wpr/catkin_ws/src/find_cup_ros/build/devel/lib/find_cup_ros/find_cup_ros_continuous_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/find_cup_ros/find_cup_ros_continuous_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/find_cup_ros/find_cup_ros_continuous_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/find_cup_ros/find_cup_ros_continuous_node"
-         OLD_RPATH "/opt/ros/kinetic/lib:/home/wpr/catkin_gpd/devel/lib:/usr/local/lib:"
+         OLD_RPATH "/opt/ros/kinetic/lib:/home/wpr/catkin_ws/devel/lib:/usr/local/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/find_cup_ros/find_cup_ros_continuous_node")
@@ -158,7 +158,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/wpr/catkin_gpd/src/find_cup_ros/build/gtest/cmake_install.cmake")
+  include("/home/wpr/catkin_ws/src/find_cup_ros/build/gtest/cmake_install.cmake")
 
 endif()
 
@@ -170,5 +170,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/wpr/catkin_gpd/src/find_cup_ros/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/wpr/catkin_ws/src/find_cup_ros/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

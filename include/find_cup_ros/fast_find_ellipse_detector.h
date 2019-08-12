@@ -26,42 +26,22 @@ last update: 23/12/2014
 // #include <cv.h>
 #include<opencv2/core/core.hpp>
 #include<opencv2/imgproc/imgproc.hpp>
-#include<opencv2/highgui/highgui.hpp>
-// #include <highgui.h>
-
+#include<opencv2/highgui/highgui.hpp> 
 #include "find_cup_ros/EllipseDetectorYaed.h"
-#include <fstream>
-//#include "opencv2\core\internal.hpp"
-
-
-
-
-void SaveEllipses(const string& workingDir, const string& imgName, const vector<Ellipse>& ellipses /*, const vector<double>& times*/);
-
-// Should be checked
-bool LoadTest(vector<Ellipse>& ellipses, const string& sTestFileName, vector<double>& times, bool bIsAngleInRadians = true);
-
-
-
+#include <fstream> 
+ 
 void LoadGT(vector<Ellipse>& gt, const string& sGtFileName, bool bIsAngleInRadians);
 
 
 bool TestOverlap(const Mat1b& gt, const Mat1b& test, float th);
 
 int Count(const vector<bool> v);
-
-
+ 
 // Should be checked !!!!!
 std::tuple<float, float, float> Evaluate(const vector<Ellipse>& ellGT, const vector<Ellipse>& ellTest, const float th_score, const Mat3b& img);
-
-
+ 
 cv::Point2i OnImage(cv::Mat);
+    
+void multiElipseFind(cv::Mat image, vector<Ellipse> ellsYaed);
 
-
-void OnVideo();
-
-void OnDataset();
-
-int main2();
-
-
+void maxScoreElipseFind(cv::Mat image, cv::Point2i &ellpse_centor, float &diameter);

@@ -130,6 +130,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
+  include ${catkin_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIRS}
   ${OpenCV_INCLUDE_DIRS}  
@@ -146,7 +147,15 @@ target_link_libraries(${PROJECT_NAME}_continuous_node  ${catkin_LIBRARIES})
 add_executable(${PROJECT_NAME}_general_node src/cup_find_ros_general_node.cpp  src/fast_find_ellipse_detector.cpp src/common.cpp src/EllipseDetectorYaed.cpp)
 add_dependencies(${PROJECT_NAME}_general_node ${PROJECT_NAME}_generate_messages_cpp)
 target_link_libraries(${PROJECT_NAME}_general_node  ${catkin_LIBRARIES})
+
+add_executable(cup_find_and_measure_node src/cup_find_and_measure_node.cpp  src/fast_find_ellipse_detector.cpp src/common.cpp src/EllipseDetectorYaed.cpp)
+add_dependencies(cup_find_and_measure_node ${PROJECT_NAME}_generate_messages_cpp)
+target_link_libraries(cup_find_and_measure_node  ${catkin_LIBRARIES})
  
+add_executable(${PROJECT_NAME}_stereo_detection_node src/stereo_detection.cpp  src/fast_find_ellipse_detector.cpp src/common.cpp src/EllipseDetectorYaed.cpp)
+add_dependencies(${PROJECT_NAME}_stereo_detection_node ${PROJECT_NAME}_generate_messages_cpp)
+target_link_libraries(${PROJECT_NAME}_stereo_detection_node  ${catkin_LIBRARIES})
+
 
 #############
 ## Install ##
@@ -164,3 +173,4 @@ install(TARGETS
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 )
+ 
