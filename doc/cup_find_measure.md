@@ -36,13 +36,109 @@ orientation:
 ```
 
 ### 1.3 多个杯子检测与定位
-![multi_cup_find](img/multi_cup_find.png)
-
-
 #### 运行
+
 ```
+roslaunch usb_cam usb_cam-test.launch (根据相机修改)
+
 roslaunch find_cup_ros find_measure_multi_cup.launch
+
+rostopic pub /camera2world geometry_msgs/Pose "position:
+  x: 0.12998
+  y: 0.36881
+  z: 0.36088
+orientation:
+  x: 0.91949
+  y: -0.38776
+  z: 0.033006
+  w: -0.05565"
+
 ```
+
+#### 运行效果
+
+![multi_cup_find](img/multi_cup_find.png)
+![multi_cup_find](img/multi_cup_find2.png)
+
+
+
+#### 检测到多个杯子后输出的消息内容
+```
+header: 
+  seq: 26
+  stamp: 
+    secs: 1565660793
+    nsecs: 826471063
+  frame_id: ''
+detections: 
+  - 
+    size: []
+    pose: 
+      position: 
+        x: 0.132457905733
+        y: 0.376505383845
+        z: 0.0736
+      orientation: 
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+    center_point: [312, 296]
+  - 
+    size: []
+    pose: 
+      position: 
+        x: 0.146763719348
+        y: 0.508798735806
+        z: 0.0736
+      orientation: 
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+    center_point: [139, 85]
+  - 
+    size: []
+    pose: 
+      position: 
+        x: 0.252507131881
+        y: 0.378282139733
+        z: 0.0736
+      orientation: 
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+    center_point: [481, 117]
+  - 
+    size: []
+    pose: 
+      position: 
+        x: 0.142525551278
+        y: 0.30552966315
+        z: 0.0736
+      orientation: 
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+    center_point: [437, 388]
+  - 
+    size: []
+    pose: 
+      position: 
+        x: 0.190660747487
+        y: 0.343137736111
+        z: 0.0736
+      orientation: 
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+    center_point: [448, 257]
+```
+
+`
 
 ---
 ## 2. 原理

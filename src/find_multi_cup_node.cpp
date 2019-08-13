@@ -100,10 +100,16 @@ void find_cup(cv::Mat & src, Eigen::Matrix3d K, double cup_diameter, double work
                  image_diameter = (e._a > e._b)? e._a : e._b;
 			}
             // 计算杯子中心与之前每个杯子中心的距离，剔除多余的中心点
-                
-
+            bool is_repeat = false;    
+            for(int i = 0; i < cup_detection_array.detections.size(); i++)
+            {
+                float dis_img = sqrt((cup_center_point.x - cup_detection_array.detections[i].center_point[0]) * (cup_center_point.x - cup_detection_array.detections[i].center_point[0])
+                    + (cup_center_point.y - cup_detection_array.detections[i].center_point[1]) * (cup_center_point.y - cup_detection_array.detections[i].center_point[1]));
+                if(dis_img < 15)
+                    is_repeat = true;
+            }
             // 计算杯子圆心的空间坐标
-            if(cup_center_point.x != 0 && cup_center_point.y != 0) //存在椭圆
+            if(cup_center_point.x != 0 && cup_center_point.y != 0 && !is_repeat) //存在椭圆
             {      
                 
                 std::cout << K(0,0) << " " << K(0,2) << " " << K(1,1) << " " << K(1,2) << endl;
