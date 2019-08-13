@@ -407,7 +407,7 @@ void maxScoreElipseFind(cv::Mat image, cv::Point2i &ellpse_centor, float &diamet
 	}
 }
 
-void multiElipseFind(cv::Mat image, vector<Ellipse> ellsYaed)
+void multiElipseFind(cv::Mat image, vector<Ellipse> &ellsYaed)
 { 
 	cv::Point2i ellpse_centor;
 	
@@ -454,9 +454,40 @@ void multiElipseFind(cv::Mat image, vector<Ellipse> ellsYaed)
 		// Detect 
 		Mat1b gray2 = gray.clone();
 		yaed->Detect(gray2, ellsYaed);
-   
+
+		vector<double> times = yaed->GetTimes();
+		// std::cout << "--------------------------------" << std::endl;
+		// std::cout << "Execution Time: " << std::endl;
+		// std::cout << "Edge Detection: \t" << times[0] << std::endl;
+		// std::cout << "Pre processing: \t" << times[1] << std::endl;
+		// std::cout << "Grouping:       \t" << times[2] << std::endl;
+		// std::cout << "Estimation:     \t" << times[3] << std::endl;
+		// std::cout << "Validation:     \t" << times[4] << std::endl;
+		// std::cout << "Clustering:     \t" << times[5] << std::endl;
+		// std::cout << "--------------------------------" << std::endl;
+		// std::cout << "Total:	         \t" << yaed->GetExecTime() << std::endl;
+		// std::cout << "--------------------------------" << std::endl;
+
+
+		vector<Ellipse> gt;
+		// LoadGT(gt, filename_minus_ext + ".txt", true); // Prasad is in radians
+
 		Mat3b resultImage = image.clone();
+
+		// Draw GT ellipses
+		for (unsigned i = 0; i < gt.size(); ++i)
+		{
+			Ellipse& e = gt[i];
+			Scalar color(0, 0, 255);
+			ellipse(resultImage, Point(cvRound(e._xc), cvRound(e._yc)), Size(cvRound(e._a), cvRound(e._b)), e._rad*180.0 / CV_PI, 0.0, 360.0, color, 3);
+		}
+
 		yaed->DrawDetectedEllipses(resultImage, ellsYaed);
+
+		Mat3b res = image.clone();
+
+		Evaluate(gt, ellsYaed, fThScoreScore, res);
+
 		// Show the image in a scalable window.
 		namedWindow("Annotated Image", WINDOW_NORMAL);
 		imshow("Annotated Image", resultImage);

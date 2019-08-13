@@ -1,0 +1,25 @@
+ 
+<launch> 
+   
+  <arg name="launch_prefix" default="" /> <!-- set to value="gdbserver localhost:10000" for remote debugging -->
+  <arg name="node_namespace" default="cup_find" />
+  <arg name="camera_name" default="/usb_cam" />
+  <arg name="camera_frame" default="camera0" />
+  <arg name="image_topic" default="image_raw" />
+  <arg name="is_continue" default="true" />
+
+  <!-- Set parameters --> 
+  
+  <node pkg="find_cup_ros" type="find_multi_cup_node" name="$(arg node_namespace)" clear_params="true" output="screen" launch-prefix="$(arg launch_prefix)" >
+    <!-- Remap topics from those used in code to those on the ROS network -->
+    <remap from="image_rect" to="$(arg camera_name)/$(arg image_topic)" />
+    <remap from="camera_info" to="$(arg camera_name)/camera_info" />
+    <param name="cup_height" type="double" value= "0.0476"/>
+    <param name="cup_diameter" type="double" value= "0.06"/>
+    <param name="diameter_max_error" type="double" value= "0.01"/> 
+    <param name="work_plane_height" type="double" value="0.026" />  
+    <param name="camera_frame" type="str" value="$(arg camera_frame)" /> 
+    <param name="is_continue" type="bool" value="$(arg is_continue)" /> 
+  </node>
+ 
+</launch>

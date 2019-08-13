@@ -60,6 +60,25 @@ rule CXX_EXECUTABLE_LINKER__cup_find_and_measure_node
 #############################################
 # Rule for compiling CXX files.
 
+rule CXX_COMPILER__find_multi_cup_node
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /usr/bin/g++-5   $DEFINES $INCLUDES $FLAGS -MMD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX executable.
+
+rule CXX_EXECUTABLE_LINKER__find_multi_cup_node
+  command = $PRE_LINK && /usr/bin/g++-5   $FLAGS  $LINK_FLAGS $in  -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  description = Linking CXX executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
 rule CXX_COMPILER__find_cup_ros_continuous_node
   depfile = $DEP_FILE
   deps = gcc

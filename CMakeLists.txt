@@ -156,6 +156,10 @@ add_executable(${PROJECT_NAME}_stereo_detection_node src/stereo_detection.cpp  s
 add_dependencies(${PROJECT_NAME}_stereo_detection_node ${PROJECT_NAME}_generate_messages_cpp)
 target_link_libraries(${PROJECT_NAME}_stereo_detection_node  ${catkin_LIBRARIES})
 
+add_executable(find_multi_cup_node src/find_multi_cup_node.cpp  src/fast_find_ellipse_detector.cpp src/common.cpp src/EllipseDetectorYaed.cpp)
+add_dependencies(find_multi_cup_node ${PROJECT_NAME}_generate_messages_cpp)
+target_link_libraries(find_multi_cup_node  ${catkin_LIBRARIES})
+
 
 #############
 ## Install ##

@@ -42,6 +42,6 @@ std::tuple<float, float, float> Evaluate(const vector<Ellipse>& ellGT, const vec
  
 cv::Point2i OnImage(cv::Mat);
     
-void multiElipseFind(cv::Mat image, vector<Ellipse> ellsYaed);
+void multiElipseFind(cv::Mat image, vector<Ellipse> &ellsYaed);
 
 void maxScoreElipseFind(cv::Mat image, cv::Point2i &ellpse_centor, float &diameter);

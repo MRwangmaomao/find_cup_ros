@@ -42,7 +42,7 @@ Eigen::Matrix3d R_camera2world_; // 相机到机械臂基座的旋转矩阵 全�
 Eigen::Vector3d t_camera2world_; // 相机到机械臂基座的平移向量 全局变量
 bool is_get_pose_ = false; // 是否收到相机姿态消息
 int tick_num_debug_ = 0; // 控制打印速度
-
+double score_threshold_ = 0.8; // 椭圆分数阈值
 /**
  * @brief Get the April Tag Option object 参数获取模板函数
  * 
@@ -69,82 +69,104 @@ T getAprilTagOption(ros::NodeHandle& pnh,
  */
 void find_cup(cv::Mat & src, Eigen::Matrix3d K, double cup_diameter, double work_plane_height, double cup_height)
 {      
+    int cup_counter = 0;
     cv::Point2i cup_center_point;
     float image_diameter = 0.0;  
-    double cup_measure_diameter = 0.0;
-    maxScoreElipseFind(src, cup_center_point, image_diameter);
+    double cup_measure_diameter = 0.0; 
+    vector<Ellipse> ellsYaed;
+    multiElipseFind(src, ellsYaed);
     ROS_DEBUG_STREAM("cup_center_point.x : " << cup_center_point.x ); 
     ROS_DEBUG_STREAM("cup_center_point.y : " << cup_center_point.y );  
-    ROS_DEBUG_STREAM("image_diameter: " << image_diameter); 
-    // maxScoreElipseFind(src, cup_center_point, cup_diameter);
-    if(cup_center_point.x != 0 && cup_center_point.y != 0) //存在椭圆
-    {      
-        cv::circle(src, cup_center_point, 3, (255,0,255),4);
-        std::cout << K(0,0) << " " << K(0,2) << " " << K(1,1) << " " << K(1,2) << endl;
-        assert(K(0,0) != 0);
-        Eigen::Vector3d ray_line_camera;
-        ray_line_camera(0) = (cup_center_point.x - K(0,2))/K(0,0); 
-        ray_line_camera(1) = (cup_center_point.y - K(1,2))/K(1,1);
-        ray_line_camera(2) = 1.0;
-        ROS_DEBUG_STREAM("cup_center_point.x: " << cup_center_point.x << "  cup_center_point.y: " << cup_center_point.y);
-        ROS_DEBUG_STREAM("ray_line_camera: " << ray_line_camera); 
+    ROS_DEBUG_STREAM("image_diameter: " << image_diameter);  
+    
+    int sz_ell = int(ellsYaed.size()) - 1;
+    int iTopN = 0;   
+    int n = (iTopN == 0) ? sz_ell : min(iTopN, sz_ell); // 遍历的椭圆数量
+    if(sz_ell > 0) // 存在椭圆
+    {
+        for (int i = 0; i < sz_ell; ++i) 
+		{
+			Ellipse& e = ellsYaed[n - i - 1]; // 读取第n个椭圆
+			if(e._score >= score_threshold_) // 满足阈值要求
+			{
+				 cup_center_point.x = e._xc;
+                 cup_center_point.y = e._yc;
+                 image_diameter = (e._a > e._b)? e._a : e._b;
+			}
 
-        
+            // 计算杯子圆心的空间坐标
+            if(cup_center_point.x != 0 && cup_center_point.y != 0) //存在椭圆
+            {      
+                
+                std::cout << K(0,0) << " " << K(0,2) << " " << K(1,1) << " " << K(1,2) << endl;
+                assert(K(0,0) != 0);
+                Eigen::Vector3d ray_line_camera;
+                ray_line_camera(0) = (cup_center_point.x - K(0,2))/K(0,0); 
+                ray_line_camera(1) = (cup_center_point.y - K(1,2))/K(1,1);
+                ray_line_camera(2) = 1.0;
+                ROS_DEBUG_STREAM("cup_center_point.x: " << cup_center_point.x << "  cup_center_point.y: " << cup_center_point.y);
+                ROS_DEBUG_STREAM("ray_line_camera: " << ray_line_camera); 
+    
+                Eigen::Vector3d d;
+                Eigen::Vector3d ray_line_world = R_camera2world_ * ray_line_camera;
+                ROS_DEBUG_STREAM("ray_line_world: " << ray_line_world); 
+                
+                double temp_scale = -(t_camera2world_(2) - work_plane_height - cup_height)/ray_line_world(2);
+                ROS_DEBUG_STREAM("temp_scale: " << temp_scale); 
 
-        Eigen::Vector3d d;
-        Eigen::Vector3d ray_line_world = R_camera2world_ * ray_line_camera;
-        ROS_DEBUG_STREAM("ray_line_world: " << ray_line_world); 
-        
-        double temp_scale = -(t_camera2world_(2) - work_plane_height - cup_height)/ray_line_world(2);
-        ROS_DEBUG_STREAM("temp_scale: " << temp_scale); 
+                // 计算圆心到光心的距离
+                d(0) = t_camera2world_(0) + temp_scale * ray_line_world(0);
+                d(1) = t_camera2world_(1) + temp_scale * ray_line_world(1);
+                d(2) = work_plane_height + cup_height;
+                double distance_center_camera = temp_scale * sqrt(ray_line_world(0)*ray_line_world(0) + ray_line_world(1)*ray_line_world(1) + ray_line_world(2)*ray_line_world(2));
+                double temp_f = static_cast<double>(K(0,0) + K(1,1))/2.0;
+                double cos_thera = temp_f/sqrt(temp_f * temp_f + (cup_center_point.x  - K(0,2))* (cup_center_point.x  - K(0,2)) + (cup_center_point.y - K(1,2)) * (cup_center_point.y - K(1,2)));
+                
+                ROS_DEBUG_STREAM("cos_thera: " << cos_thera); 
+                ROS_DEBUG_STREAM("cup_diameter: " << cup_diameter); 
+                ROS_DEBUG_STREAM("distance_center_camera: " << distance_center_camera); 
+                
+                double cup_image_diameter =  (cup_diameter * temp_f)/(cos_thera * cos_thera* distance_center_camera);
+                cup_measure_diameter =  (cos_thera * cos_thera* distance_center_camera * image_diameter * 2)/(temp_f);
+                ROS_DEBUG_STREAM("Cup diameter is:" << cup_image_diameter << "   actual diameter is : " << image_diameter*2);
+                ROS_DEBUG_STREAM("cup_measure_diameter is:" << cup_measure_diameter << "   actual cup_diameter is : " << cup_diameter);
+                ROS_DEBUG_STREAM("输出三维坐标" << d); 
 
-        // 计算圆心到光心的距离
-        d(0) = t_camera2world_(0) + temp_scale * ray_line_world(0);
-        d(1) = t_camera2world_(1) + temp_scale * ray_line_world(1);
-        d(2) = work_plane_height + cup_height;
-        double distance_center_camera = temp_scale * sqrt(ray_line_world(0)*ray_line_world(0) + ray_line_world(1)*ray_line_world(1) + ray_line_world(2)*ray_line_world(2));
-        double temp_f = static_cast<double>(K(0,0) + K(1,1))/2.0;
-        double cos_thera = temp_f/sqrt(temp_f * temp_f + (cup_center_point.x  - K(0,2))* (cup_center_point.x  - K(0,2)) + (cup_center_point.y - K(1,2)) * (cup_center_point.y - K(1,2)));
-        
-        ROS_DEBUG_STREAM("cos_thera: " << cos_thera); 
-        ROS_DEBUG_STREAM("cup_diameter: " << cup_diameter); 
-        ROS_DEBUG_STREAM("distance_center_camera: " << distance_center_camera); 
-        
-        double cup_image_diameter =  (cup_diameter * temp_f)/(cos_thera * cos_thera* distance_center_camera);
-        cup_measure_diameter =  (cos_thera * cos_thera* distance_center_camera * image_diameter * 2)/(temp_f);
-        ROS_DEBUG_STREAM("Cup diameter is:" << cup_image_diameter << "   actual diameter is : " << image_diameter*2);
-        ROS_DEBUG_STREAM("cup_measure_diameter is:" << cup_measure_diameter << "   actual cup_diameter is : " << cup_diameter);
-        ROS_DEBUG_STREAM("输出三维坐标" << d); 
-
-        // 满足要求
-        if(
-            ((cup_diameter > cup_measure_diameter) && ((cup_diameter - cup_measure_diameter) < diameter_max_error_ )) 
-            || 
-            ((cup_measure_diameter >= cup_diameter) && ((cup_measure_diameter - cup_diameter) < diameter_max_error_))
-            )
-        {
-            geometry_msgs::Pose cup_pose;
-            //ROS发布杯子的三维坐标消息
-            cup_pose.position.x = d(0);
-            cup_pose.position.y = d(1);
-            cup_pose.position.z = d(2);
-            cup_pose.orientation.x = 0;
-            cup_pose.orientation.y = 0;
-            cup_pose.orientation.z = 0;
-            cup_pose.orientation.w = 1; 
-            cup_detections_publisher_.publish(cup_pose);   
-            ROS_INFO_STREAM("find cup and publish pose. ");
-        }
-        else
-        {
-            ROS_INFO_STREAM("error cup find. ");
-        }
-        
-        
+                // 满足要求
+                if(
+                    ((cup_diameter > cup_measure_diameter) && ((cup_diameter - cup_measure_diameter) < diameter_max_error_ )) 
+                    || 
+                    ((cup_measure_diameter >= cup_diameter) && ((cup_measure_diameter - cup_diameter) < diameter_max_error_))
+                    )
+                {
+                    cv::circle(src, cup_center_point, 3, (255,0,255),4);
+                    geometry_msgs::Pose cup_pose;
+                    //ROS发布杯子的三维坐标消息
+                    cup_pose.position.x = d(0);
+                    cup_pose.position.y = d(1);
+                    cup_pose.position.z = d(2);
+                    cup_pose.orientation.x = 0;
+                    cup_pose.orientation.y = 0;
+                    cup_pose.orientation.z = 0;
+                    cup_pose.orientation.w = 1; 
+                    cup_detections_publisher_.publish(cup_pose);   
+                    ROS_INFO_STREAM("find cup and publish pose. ");
+                    cup_counter++;
+                }
+                else
+                {
+                    ROS_INFO_STREAM("error cup find. ");
+                }  
+            } //if(cup_center_point.x != 0 && cup_center_point.y != 0) 
+            cup_center_point.x = 0;
+            cup_center_point.y = 0;
+		} // for (int i = 0; i < sz_ell; ++i) 
         namedWindow("src", CV_WINDOW_AUTOSIZE );
         imshow("src",src);
-        cvWaitKey(3);  
-    } 
+        cvWaitKey(3);
+    } // 存在椭圆
+
+    ROS_INFO_STREAM("ellpse size is: " << cup_counter);
 }
  
 
@@ -238,8 +260,8 @@ int main(int argc, char **argv)
     
     ROS_INFO_STREAM("--------------------start find cup--------------------------");
     
-    // ros::console::set_logger_level(ROSCONSOLE_DEFAULT_NAME, ros::console::levels::Debug);
-        ros::console::set_logger_level(ROSCONSOLE_DEFAULT_NAME, ros::console::levels::Info);
+    ros::console::set_logger_level(ROSCONSOLE_DEFAULT_NAME, ros::console::levels::Debug);
+        // ros::console::set_logger_level(ROSCONSOLE_DEFAULT_NAME, ros::console::levels::Info);
     it_ = std::shared_ptr<image_transport::ImageTransport>(
         new image_transport::ImageTransport(nh));
 

@@ -8,7 +8,7 @@ cd catkin_ws
 catkin_make
 ``` 
 
-### 1.2 运行 
+### 1.2 单个杯子定位以及直径测量 
 
 #### 打开相机
 ```
@@ -21,7 +21,7 @@ roslaunch usb_cam usb_cam-test.launch （根据自己的相机驱动进行修改
 roslaunch find_cup_ros find_and_measure_cup_usbcam.launch
 ```
 
-### 发布/camera2world消息（修改相机相对于机械臂基座坐标系的位姿关系）
+#### 发布/camera2world消息（修改相机相对于机械臂基座坐标系的位姿关系）
 
 ```
 rostopic pub /camera2world geometry_msgs/Pose "position:
@@ -33,6 +33,15 @@ orientation:
   y: 0.0
   z: 0.0
   w: 0.0"
+```
+
+### 1.3 多个杯子检测与定位
+![multi_cup_find](img/multi_cup_find.png)
+
+
+#### 运行
+```
+roslaunch find_cup_ros find_measure_multi_cup.launch
 ```
 
 ---

@@ -1,97 +1,121 @@
 [
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_general_node.dir/src/cup_find_ros_general_node.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/cup_find_ros_general_node.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_general_node.dir/src/cup_find_ros_general_node.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/cup_find_ros_general_node.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/cup_find_ros_general_node.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_general_node.dir/src/fast_find_ellipse_detector.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/fast_find_ellipse_detector.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_general_node.dir/src/fast_find_ellipse_detector.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/fast_find_ellipse_detector.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/fast_find_ellipse_detector.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_general_node.dir/src/common.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/common.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_general_node.dir/src/common.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/common.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/common.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_general_node.dir/src/EllipseDetectorYaed.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/EllipseDetectorYaed.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_general_node.dir/src/EllipseDetectorYaed.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/EllipseDetectorYaed.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/EllipseDetectorYaed.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/cup_find_and_measure_node.dir/src/cup_find_and_measure_node.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/cup_find_and_measure_node.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/cup_find_and_measure_node.dir/src/cup_find_and_measure_node.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/cup_find_and_measure_node.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/cup_find_and_measure_node.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/cup_find_and_measure_node.dir/src/fast_find_ellipse_detector.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/fast_find_ellipse_detector.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/cup_find_and_measure_node.dir/src/fast_find_ellipse_detector.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/fast_find_ellipse_detector.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/fast_find_ellipse_detector.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/cup_find_and_measure_node.dir/src/common.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/common.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/cup_find_and_measure_node.dir/src/common.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/common.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/common.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/cup_find_and_measure_node.dir/src/EllipseDetectorYaed.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/EllipseDetectorYaed.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/cup_find_and_measure_node.dir/src/EllipseDetectorYaed.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/EllipseDetectorYaed.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/EllipseDetectorYaed.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_continuous_node.dir/src/cup_find_ros_continuous_node.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/cup_find_ros_continuous_node.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_multi_cup_node.dir/src/find_multi_cup_node.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/find_multi_cup_node.cpp",
+  "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/find_multi_cup_node.cpp"
+},
+
+{
+  "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_multi_cup_node.dir/src/fast_find_ellipse_detector.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/fast_find_ellipse_detector.cpp",
+  "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/fast_find_ellipse_detector.cpp"
+},
+
+{
+  "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_multi_cup_node.dir/src/common.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/common.cpp",
+  "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/common.cpp"
+},
+
+{
+  "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_multi_cup_node.dir/src/EllipseDetectorYaed.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/EllipseDetectorYaed.cpp",
+  "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/EllipseDetectorYaed.cpp"
+},
+
+{
+  "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_continuous_node.dir/src/cup_find_ros_continuous_node.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/cup_find_ros_continuous_node.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/cup_find_ros_continuous_node.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_continuous_node.dir/src/fast_find_ellipse_detector.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/fast_find_ellipse_detector.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_continuous_node.dir/src/fast_find_ellipse_detector.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/fast_find_ellipse_detector.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/fast_find_ellipse_detector.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_continuous_node.dir/src/common.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/common.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_continuous_node.dir/src/common.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/common.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/common.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_continuous_node.dir/src/EllipseDetectorYaed.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/EllipseDetectorYaed.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_continuous_node.dir/src/EllipseDetectorYaed.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/EllipseDetectorYaed.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/EllipseDetectorYaed.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/stereo_detection.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/stereo_detection.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/stereo_detection.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/stereo_detection.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/stereo_detection.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/fast_find_ellipse_detector.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/fast_find_ellipse_detector.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/fast_find_ellipse_detector.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/fast_find_ellipse_detector.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/fast_find_ellipse_detector.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/common.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/common.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/common.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/common.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/common.cpp"
 },
 
 {
   "directory": "/home/wpr/catkin_ws/src/find_cup_ros/build",
-  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/EllipseDetectorYaed.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/EllipseDetectorYaed.cpp",
+  "command": "/usr/bin/g++-5   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\\\"find_cup_ros\\\" -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag  -g   -std=c++11 -o CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/EllipseDetectorYaed.cpp.o -c /home/wpr/catkin_ws/src/find_cup_ros/src/EllipseDetectorYaed.cpp",
   "file": "/home/wpr/catkin_ws/src/find_cup_ros/src/EllipseDetectorYaed.cpp"
 },
 

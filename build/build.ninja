@@ -65,28 +65,28 @@ build CMakeFiles/find_cup_ros_general_node.dir/src/cup_find_ros_general_node.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/find_cup_ros_general_node.dir/src/cup_find_ros_general_node.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/find_cup_ros_general_node.dir
   OBJECT_FILE_DIR = CMakeFiles/find_cup_ros_general_node.dir/src
 build CMakeFiles/find_cup_ros_general_node.dir/src/fast_find_ellipse_detector.cpp.o: CXX_COMPILER__find_cup_ros_general_node ../src/fast_find_ellipse_detector.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/find_cup_ros_general_node.dir/src/fast_find_ellipse_detector.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/find_cup_ros_general_node.dir
   OBJECT_FILE_DIR = CMakeFiles/find_cup_ros_general_node.dir/src
 build CMakeFiles/find_cup_ros_general_node.dir/src/common.cpp.o: CXX_COMPILER__find_cup_ros_general_node ../src/common.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/find_cup_ros_general_node.dir/src/common.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/find_cup_ros_general_node.dir
   OBJECT_FILE_DIR = CMakeFiles/find_cup_ros_general_node.dir/src
 build CMakeFiles/find_cup_ros_general_node.dir/src/EllipseDetectorYaed.cpp.o: CXX_COMPILER__find_cup_ros_general_node ../src/EllipseDetectorYaed.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/find_cup_ros_general_node.dir/src/EllipseDetectorYaed.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/find_cup_ros_general_node.dir
   OBJECT_FILE_DIR = CMakeFiles/find_cup_ros_general_node.dir/src
 
@@ -172,28 +172,28 @@ build CMakeFiles/cup_find_and_measure_node.dir/src/cup_find_and_measure_node.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/cup_find_and_measure_node.dir/src/cup_find_and_measure_node.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/cup_find_and_measure_node.dir
   OBJECT_FILE_DIR = CMakeFiles/cup_find_and_measure_node.dir/src
 build CMakeFiles/cup_find_and_measure_node.dir/src/fast_find_ellipse_detector.cpp.o: CXX_COMPILER__cup_find_and_measure_node ../src/fast_find_ellipse_detector.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/cup_find_and_measure_node.dir/src/fast_find_ellipse_detector.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/cup_find_and_measure_node.dir
   OBJECT_FILE_DIR = CMakeFiles/cup_find_and_measure_node.dir/src
 build CMakeFiles/cup_find_and_measure_node.dir/src/common.cpp.o: CXX_COMPILER__cup_find_and_measure_node ../src/common.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/cup_find_and_measure_node.dir/src/common.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/cup_find_and_measure_node.dir
   OBJECT_FILE_DIR = CMakeFiles/cup_find_and_measure_node.dir/src
 build CMakeFiles/cup_find_and_measure_node.dir/src/EllipseDetectorYaed.cpp.o: CXX_COMPILER__cup_find_and_measure_node ../src/EllipseDetectorYaed.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/cup_find_and_measure_node.dir/src/EllipseDetectorYaed.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/cup_find_and_measure_node.dir
   OBJECT_FILE_DIR = CMakeFiles/cup_find_and_measure_node.dir/src
 
@@ -272,6 +272,53 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for tf_generate_messages_eus
 
 build tf_generate_messages_eus: phony
+# =============================================================================
+# Object build statements for EXECUTABLE target find_multi_cup_node
+
+build CMakeFiles/find_multi_cup_node.dir/src/find_multi_cup_node.cpp.o: CXX_COMPILER__find_multi_cup_node ../src/find_multi_cup_node.cpp
+  DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
+  DEP_FILE = CMakeFiles/find_multi_cup_node.dir/src/find_multi_cup_node.cpp.o.d
+  FLAGS = -g   -std=c++11
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  OBJECT_DIR = CMakeFiles/find_multi_cup_node.dir
+  OBJECT_FILE_DIR = CMakeFiles/find_multi_cup_node.dir/src
+build CMakeFiles/find_multi_cup_node.dir/src/fast_find_ellipse_detector.cpp.o: CXX_COMPILER__find_multi_cup_node ../src/fast_find_ellipse_detector.cpp
+  DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
+  DEP_FILE = CMakeFiles/find_multi_cup_node.dir/src/fast_find_ellipse_detector.cpp.o.d
+  FLAGS = -g   -std=c++11
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  OBJECT_DIR = CMakeFiles/find_multi_cup_node.dir
+  OBJECT_FILE_DIR = CMakeFiles/find_multi_cup_node.dir/src
+build CMakeFiles/find_multi_cup_node.dir/src/common.cpp.o: CXX_COMPILER__find_multi_cup_node ../src/common.cpp
+  DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
+  DEP_FILE = CMakeFiles/find_multi_cup_node.dir/src/common.cpp.o.d
+  FLAGS = -g   -std=c++11
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  OBJECT_DIR = CMakeFiles/find_multi_cup_node.dir
+  OBJECT_FILE_DIR = CMakeFiles/find_multi_cup_node.dir/src
+build CMakeFiles/find_multi_cup_node.dir/src/EllipseDetectorYaed.cpp.o: CXX_COMPILER__find_multi_cup_node ../src/EllipseDetectorYaed.cpp
+  DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
+  DEP_FILE = CMakeFiles/find_multi_cup_node.dir/src/EllipseDetectorYaed.cpp.o.d
+  FLAGS = -g   -std=c++11
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  OBJECT_DIR = CMakeFiles/find_multi_cup_node.dir
+  OBJECT_FILE_DIR = CMakeFiles/find_multi_cup_node.dir/src
+
+# =============================================================================
+# Link build statements for EXECUTABLE target find_multi_cup_node
+
+
+#############################################
+# Link the executable devel/lib/find_cup_ros/find_multi_cup_node
+
+build devel/lib/find_cup_ros/find_multi_cup_node: CXX_EXECUTABLE_LINKER__find_multi_cup_node CMakeFiles/find_multi_cup_node.dir/src/find_multi_cup_node.cpp.o CMakeFiles/find_multi_cup_node.dir/src/fast_find_ellipse_detector.cpp.o CMakeFiles/find_multi_cup_node.dir/src/common.cpp.o CMakeFiles/find_multi_cup_node.dir/src/EllipseDetectorYaed.cpp.o | /opt/ros/kinetic/lib/libimage_geometry.so /home/wpr/catkin_ws/devel/lib/libapriltag_ros_common.so /home/wpr/catkin_ws/devel/lib/libapriltag_ros_continuous_detector.so /home/wpr/catkin_ws/devel/lib/libapriltag_ros_single_image_detector.so /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_calib3d3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_dnn3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_features2d3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_flann3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_highgui3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ml3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_objdetect3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_photo3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_shape3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_stitching3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_superres3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_video3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_videoio3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_videostab3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_viz3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_aruco3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_bgsegm3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_bioinspired3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ccalib3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_cvv3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_datasets3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_dpm3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_face3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_fuzzy3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_hdf3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_img_hash3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_line_descriptor3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_optflow3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_phase_unwrapping3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_plot3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_reg3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_rgbd3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_saliency3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_stereo3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_structured_light3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_surface_matching3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_text3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_tracking3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xfeatures2d3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ximgproc3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xobjdetect3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xphoto3.so.3.3.1 /usr/local/lib/libapriltag.so /opt/ros/kinetic/lib/libimage_transport.so /opt/ros/kinetic/lib/libcv_bridge.so /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgcodecs3.so.3.3.1 /opt/ros/kinetic/lib/libtf.so /opt/ros/kinetic/lib/libtf2_ros.so /opt/ros/kinetic/lib/libactionlib.so /opt/ros/kinetic/lib/libmessage_filters.so /opt/ros/kinetic/lib/libtf2.so /opt/ros/kinetic/lib/libnodeletlib.so /usr/lib/x86_64-linux-gnu/libuuid.so /opt/ros/kinetic/lib/libbondcpp.so /opt/ros/kinetic/lib/libroscpp.so /usr/lib/x86_64-linux-gnu/libboost_signals.so /opt/ros/kinetic/lib/libxmlrpcpp.so /opt/ros/kinetic/lib/libroscpp_serialization.so /usr/lib/x86_64-linux-gnu/libtinyxml2.so /opt/ros/kinetic/lib/libclass_loader.so /usr/lib/libPocoFoundation.so /usr/lib/x86_64-linux-gnu/libdl.so /opt/ros/kinetic/lib/librosconsole.so /opt/ros/kinetic/lib/librosconsole_log4cxx.so /opt/ros/kinetic/lib/librosconsole_backend_interface.so /usr/lib/x86_64-linux-gnu/liblog4cxx.so /usr/lib/x86_64-linux-gnu/libboost_regex.so /opt/ros/kinetic/lib/librostime.so /opt/ros/kinetic/lib/libcpp_common.so /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_chrono.so /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_atomic.so /usr/lib/x86_64-linux-gnu/libpthread.so /usr/lib/x86_64-linux-gnu/libconsole_bridge.so /opt/ros/kinetic/lib/libroslib.so /opt/ros/kinetic/lib/librospack.so /usr/lib/x86_64-linux-gnu/libpython2.7.so /usr/lib/x86_64-linux-gnu/libboost_filesystem.so /usr/lib/x86_64-linux-gnu/libboost_program_options.so /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libtinyxml.so
+  FLAGS = -g
+  LINK_LIBRARIES = -rdynamic /opt/ros/kinetic/lib/libimage_geometry.so /home/wpr/catkin_ws/devel/lib/libapriltag_ros_common.so /home/wpr/catkin_ws/devel/lib/libapriltag_ros_continuous_detector.so /home/wpr/catkin_ws/devel/lib/libapriltag_ros_single_image_detector.so /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_calib3d3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_dnn3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_features2d3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_flann3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_highgui3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ml3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_objdetect3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_photo3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_shape3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_stitching3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_superres3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_video3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_videoio3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_videostab3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_viz3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_aruco3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_bgsegm3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_bioinspired3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ccalib3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_cvv3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_datasets3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_dpm3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_face3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_fuzzy3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_hdf3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_img_hash3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_line_descriptor3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_optflow3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_phase_unwrapping3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_plot3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_reg3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_rgbd3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_saliency3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_stereo3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_structured_light3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_surface_matching3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_text3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_tracking3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xfeatures2d3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ximgproc3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xobjdetect3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xphoto3.so.3.3.1 /usr/local/lib/libapriltag.so /opt/ros/kinetic/lib/libimage_transport.so /opt/ros/kinetic/lib/libcv_bridge.so /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1 /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgcodecs3.so.3.3.1 /opt/ros/kinetic/lib/libtf.so /opt/ros/kinetic/lib/libtf2_ros.so /opt/ros/kinetic/lib/libactionlib.so /opt/ros/kinetic/lib/libmessage_filters.so /opt/ros/kinetic/lib/libtf2.so /opt/ros/kinetic/lib/libnodeletlib.so -luuid /opt/ros/kinetic/lib/libbondcpp.so /opt/ros/kinetic/lib/libroscpp.so -lboost_signals /opt/ros/kinetic/lib/libxmlrpcpp.so /opt/ros/kinetic/lib/libroscpp_serialization.so -ltinyxml2 /opt/ros/kinetic/lib/libclass_loader.so -lPocoFoundation -ldl /opt/ros/kinetic/lib/librosconsole.so /opt/ros/kinetic/lib/librosconsole_log4cxx.so /opt/ros/kinetic/lib/librosconsole_backend_interface.so -llog4cxx -lboost_regex /opt/ros/kinetic/lib/librostime.so /opt/ros/kinetic/lib/libcpp_common.so -lboost_thread -lboost_chrono -lboost_date_time -lboost_atomic -lpthread -lconsole_bridge /opt/ros/kinetic/lib/libroslib.so /opt/ros/kinetic/lib/librospack.so -lpython2.7 -lboost_filesystem -lboost_program_options -lboost_system -ltinyxml -Wl,-rpath,/opt/ros/kinetic/lib:/home/wpr/catkin_ws/devel/lib:/usr/local/lib
+  OBJECT_DIR = CMakeFiles/find_multi_cup_node.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = devel/lib/find_cup_ros/find_multi_cup_node
+  TARGET_PDB = find_multi_cup_node.dbg
 
 #############################################
 # Utility command for rosgraph_msgs_generate_messages_nodejs
@@ -294,28 +341,28 @@ build CMakeFiles/find_cup_ros_continuous_node.dir/src/cup_find_ros_continuous_no
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/find_cup_ros_continuous_node.dir/src/cup_find_ros_continuous_node.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/find_cup_ros_continuous_node.dir
   OBJECT_FILE_DIR = CMakeFiles/find_cup_ros_continuous_node.dir/src
 build CMakeFiles/find_cup_ros_continuous_node.dir/src/fast_find_ellipse_detector.cpp.o: CXX_COMPILER__find_cup_ros_continuous_node ../src/fast_find_ellipse_detector.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/find_cup_ros_continuous_node.dir/src/fast_find_ellipse_detector.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/find_cup_ros_continuous_node.dir
   OBJECT_FILE_DIR = CMakeFiles/find_cup_ros_continuous_node.dir/src
 build CMakeFiles/find_cup_ros_continuous_node.dir/src/common.cpp.o: CXX_COMPILER__find_cup_ros_continuous_node ../src/common.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/find_cup_ros_continuous_node.dir/src/common.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/find_cup_ros_continuous_node.dir
   OBJECT_FILE_DIR = CMakeFiles/find_cup_ros_continuous_node.dir/src
 build CMakeFiles/find_cup_ros_continuous_node.dir/src/EllipseDetectorYaed.cpp.o: CXX_COMPILER__find_cup_ros_continuous_node ../src/EllipseDetectorYaed.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/find_cup_ros_continuous_node.dir/src/EllipseDetectorYaed.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/find_cup_ros_continuous_node.dir
   OBJECT_FILE_DIR = CMakeFiles/find_cup_ros_continuous_node.dir/src
 
@@ -411,28 +458,28 @@ build CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/stereo_detection.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/stereo_detection.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/find_cup_ros_stereo_detection_node.dir
   OBJECT_FILE_DIR = CMakeFiles/find_cup_ros_stereo_detection_node.dir/src
 build CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/fast_find_ellipse_detector.cpp.o: CXX_COMPILER__find_cup_ros_stereo_detection_node ../src/fast_find_ellipse_detector.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/fast_find_ellipse_detector.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/find_cup_ros_stereo_detection_node.dir
   OBJECT_FILE_DIR = CMakeFiles/find_cup_ros_stereo_detection_node.dir/src
 build CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/common.cpp.o: CXX_COMPILER__find_cup_ros_stereo_detection_node ../src/common.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/common.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/find_cup_ros_stereo_detection_node.dir
   OBJECT_FILE_DIR = CMakeFiles/find_cup_ros_stereo_detection_node.dir/src
 build CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/EllipseDetectorYaed.cpp.o: CXX_COMPILER__find_cup_ros_stereo_detection_node ../src/EllipseDetectorYaed.cpp
   DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_PACKAGE_NAME=\"find_cup_ros\"
   DEP_FILE = CMakeFiles/find_cup_ros_stereo_detection_node.dir/src/EllipseDetectorYaed.cpp.o.d
   FLAGS = -g   -std=c++11
-  INCLUDES = -I../include -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
+  INCLUDES = -I../include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/wpr/catkin_ws/devel/include -I/home/wpr/catkin_ws/src/apriltag_ros/apriltag_ros/include -I/usr/local/include -I/usr/include/eigen3 -I/apriltag
   OBJECT_DIR = CMakeFiles/find_cup_ros_stereo_detection_node.dir
   OBJECT_FILE_DIR = CMakeFiles/find_cup_ros_stereo_detection_node.dir/src
 
@@ -769,6 +816,7 @@ build cup_find_and_measure_node: phony devel/lib/find_cup_ros/cup_find_and_measu
 build find_cup_ros_continuous_node: phony devel/lib/find_cup_ros/find_cup_ros_continuous_node
 build find_cup_ros_general_node: phony devel/lib/find_cup_ros/find_cup_ros_general_node
 build find_cup_ros_stereo_detection_node: phony devel/lib/find_cup_ros/find_cup_ros_stereo_detection_node
+build find_multi_cup_node: phony devel/lib/find_cup_ros/find_multi_cup_node
 build gmock: phony gtest/libgmock.so
 build gmock_main: phony gtest/libgmock_main.so
 build gtest: phony gtest/gtest/libgtest.so
@@ -789,7 +837,7 @@ build libgtest_main.so: phony gtest/gtest/libgtest_main.so
 #############################################
 # The main all target.
 
-build all: phony devel/lib/find_cup_ros/find_cup_ros_general_node devel/lib/find_cup_ros/cup_find_and_measure_node devel/lib/find_cup_ros/find_cup_ros_continuous_node devel/lib/find_cup_ros/find_cup_ros_stereo_detection_node
+build all: phony devel/lib/find_cup_ros/find_cup_ros_general_node devel/lib/find_cup_ros/cup_find_and_measure_node devel/lib/find_cup_ros/find_multi_cup_node devel/lib/find_cup_ros/find_cup_ros_continuous_node devel/lib/find_cup_ros/find_cup_ros_stereo_detection_node
 
 #############################################
 # Make the all target the default.
