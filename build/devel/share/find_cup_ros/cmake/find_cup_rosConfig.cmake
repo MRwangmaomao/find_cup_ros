@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(find_cup_ros_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/wpr/catkin_ws/src/find_cup_ros/include;/opt/ros/kinetic/include/opencv-3.3.1-dev;/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv " STREQUAL " ")
+if(NOT "/home/wpr/catkin_ws/src/find_cup_ros/build/devel/include;/home/wpr/catkin_ws/src/find_cup_ros/include;/opt/ros/kinetic/include/opencv-3.3.1-dev;/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv " STREQUAL " ")
   set(find_cup_ros_INCLUDE_DIRS "")
-  set(_include_dirs "/home/wpr/catkin_ws/src/find_cup_ros/include;/opt/ros/kinetic/include/opencv-3.3.1-dev;/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv")
+  set(_include_dirs "/home/wpr/catkin_ws/src/find_cup_ros/build/devel/include;/home/wpr/catkin_ws/src/find_cup_ros/include;/opt/ros/kinetic/include/opencv-3.3.1-dev;/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/wpr/catkin_ws/src/find_cup_ros/build/devel/lib)
+    foreach(path /home/wpr/catkin_ws/src/find_cup_ros/build/devel/lib;/home/wpr/catkin_ws/devel/lib;/home/wpr/catkin_cartographer/devel/lib;/home/wpr/catkin_ur/devel/lib;/home/wpr/IM-robot/devel/lib;/home/wpr/catkin_aubo/devel/lib;/home/wpr/catkin_VINSSusion/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -152,7 +152,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(find_cup_ros_EXPORTED_TARGETS "")
+set(find_cup_ros_EXPORTED_TARGETS "find_cup_ros_generate_messages_cpp;find_cup_ros_generate_messages_eus;find_cup_ros_generate_messages_lisp;find_cup_ros_generate_messages_nodejs;find_cup_ros_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${find_cup_ros_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -189,7 +189,7 @@ foreach(depend ${depends})
   list(APPEND find_cup_ros_EXPORTED_TARGETS ${${find_cup_ros_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "find_cup_ros-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${find_cup_ros_DIR}/${extra})

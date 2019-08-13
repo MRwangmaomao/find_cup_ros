@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /usr/local/lib)
+    foreach(path /usr/local/lib;/home/wpr/catkin_ws/devel/lib;/home/wpr/catkin_cartographer/devel/lib;/home/wpr/catkin_ur/devel/lib;/home/wpr/IM-robot/devel/lib;/home/wpr/catkin_aubo/devel/lib;/home/wpr/catkin_VINSSusion/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -152,7 +152,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(find_cup_ros_EXPORTED_TARGETS "")
+set(find_cup_ros_EXPORTED_TARGETS "find_cup_ros_generate_messages_cpp;find_cup_ros_generate_messages_eus;find_cup_ros_generate_messages_lisp;find_cup_ros_generate_messages_nodejs;find_cup_ros_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${find_cup_ros_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -189,7 +189,7 @@ foreach(depend ${depends})
   list(APPEND find_cup_ros_EXPORTED_TARGETS ${${find_cup_ros_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "find_cup_ros-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${find_cup_ros_DIR}/${extra})

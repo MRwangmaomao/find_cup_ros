@@ -1,11 +1,11 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/wpr/catkin_ws/src/find_cup_ros/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_1016a"
-[1/2] Building C object CMakeFiles/cmTC_1016a.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_1016a
-FAILED: : && /usr/bin/gcc-5     CMakeFiles/cmTC_1016a.dir/CheckSymbolExists.c.o  -o cmTC_1016a  -rdynamic && :
-CMakeFiles/cmTC_1016a.dir/CheckSymbolExists.c.o：在函数‘main’中：
+Run Build Command:"/usr/bin/ninja" "cmTC_ec1d6"
+[1/2] Building C object CMakeFiles/cmTC_ec1d6.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_ec1d6
+FAILED: : && /usr/bin/gcc-5     CMakeFiles/cmTC_ec1d6.dir/CheckSymbolExists.c.o  -o cmTC_ec1d6  -rdynamic && :
+CMakeFiles/cmTC_ec1d6.dir/CheckSymbolExists.c.o：在函数‘main’中：
 CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
 collect2: error: ld returned 1 exit status
 ninja: build stopped: subcommand failed.
@@ -28,10 +28,10 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/wpr/catkin_ws/src/find_cup_ros/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_a935b"
-[1/2] Building C object CMakeFiles/cmTC_a935b.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_a935b
-FAILED: : && /usr/bin/gcc-5  -DCHECK_FUNCTION_EXISTS=pthread_create   CMakeFiles/cmTC_a935b.dir/CheckFunctionExists.c.o  -o cmTC_a935b  -rdynamic -lpthreads && :
+Run Build Command:"/usr/bin/ninja" "cmTC_09af2"
+[1/2] Building C object CMakeFiles/cmTC_09af2.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_09af2
+FAILED: : && /usr/bin/gcc-5  -DCHECK_FUNCTION_EXISTS=pthread_create   CMakeFiles/cmTC_09af2.dir/CheckFunctionExists.c.o  -o cmTC_09af2  -rdynamic -lpthreads && :
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
 ninja: build stopped: subcommand failed.

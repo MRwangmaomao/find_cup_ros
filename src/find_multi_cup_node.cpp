@@ -22,6 +22,8 @@
 
 #include "find_cup_ros/fast_find_ellipse_detector.h"
 #include "image_geometry/pinhole_camera_model.h"
+#include "find_cup_ros/CupDetection.h"
+#include "find_cup_ros/CupDetectionArray.h"
 
 using namespace Eigen;
 using namespace cv;
@@ -43,6 +45,8 @@ Eigen::Vector3d t_camera2world_; // 相机到机械臂基座的平移向量 全�
 bool is_get_pose_ = false; // 是否收到相机姿态消息
 int tick_num_debug_ = 0; // 控制打印速度
 double score_threshold_ = 0.8; // 椭圆分数阈值
+
+
 /**
  * @brief Get the April Tag Option object 参数获取模板函数
  * 
@@ -84,6 +88,8 @@ void find_cup(cv::Mat & src, Eigen::Matrix3d K, double cup_diameter, double work
     int n = (iTopN == 0) ? sz_ell : min(iTopN, sz_ell); // 遍历的椭圆数量
     if(sz_ell > 0) // 存在椭圆
     {
+        find_cup_ros::CupDetectionArray cup_detection_array;
+        cup_detection_array.header.stamp = ros::Time::now();
         for (int i = 0; i < sz_ell; ++i) 
 		{
 			Ellipse& e = ellsYaed[n - i - 1]; // 读取第n个椭圆
@@ -97,7 +103,8 @@ void find_cup(cv::Mat & src, Eigen::Matrix3d K, double cup_diameter, double work
             // 计算杯子圆心的空间坐标
             if(cup_center_point.x != 0 && cup_center_point.y != 0) //存在椭圆
             {      
-                
+                // 计算杯子中心与之前每个杯子中心的距离，剔除多余的中心点
+
                 std::cout << K(0,0) << " " << K(0,2) << " " << K(1,1) << " " << K(1,2) << endl;
                 assert(K(0,0) != 0);
                 Eigen::Vector3d ray_line_camera;
@@ -140,6 +147,7 @@ void find_cup(cv::Mat & src, Eigen::Matrix3d K, double cup_diameter, double work
                     )
                 {
                     cv::circle(src, cup_center_point, 3, (255,0,255),4);
+                    find_cup_ros::CupDetection cup_detection;
                     geometry_msgs::Pose cup_pose;
                     //ROS发布杯子的三维坐标消息
                     cup_pose.position.x = d(0);
@@ -149,8 +157,12 @@ void find_cup(cv::Mat & src, Eigen::Matrix3d K, double cup_diameter, double work
                     cup_pose.orientation.y = 0;
                     cup_pose.orientation.z = 0;
                     cup_pose.orientation.w = 1; 
-                    cup_detections_publisher_.publish(cup_pose);   
-                    ROS_INFO_STREAM("find cup and publish pose. ");
+                    cup_detection.pose = cup_pose;
+                    cup_detection.center_point.push_back(cup_center_point.x);
+                    cup_detection.center_point.push_back(cup_center_point.y);
+                    cup_detection_array.detections.push_back(cup_detection);
+                    // cup_detections_publisher_.publish(cup_pose);   
+                    ROS_DEBUG_STREAM("find cup and publish pose. ");
                     cup_counter++;
                 }
                 else
@@ -161,6 +173,7 @@ void find_cup(cv::Mat & src, Eigen::Matrix3d K, double cup_diameter, double work
             cup_center_point.x = 0;
             cup_center_point.y = 0;
 		} // for (int i = 0; i < sz_ell; ++i) 
+        cup_detections_publisher_.publish(cup_detection_array); 
         namedWindow("src", CV_WINDOW_AUTOSIZE );
         imshow("src",src);
         cvWaitKey(3);
@@ -274,7 +287,7 @@ int main(int argc, char **argv)
                             &camera2worldPoseCallback );
 
     cup_detections_publisher_ =       
-        nh.advertise<geometry_msgs::Pose>("/cup_detections", 1);
+        nh.advertise<find_cup_ros::CupDetectionArray>("/cup_detections", 1);
 
     is_continue_ = getAprilTagOption<bool>(pnh, 
         "is_continue", true); 
