@@ -24,6 +24,7 @@
 #include "image_geometry/pinhole_camera_model.h"
 #include "find_cup_ros/CupDetection.h"
 #include "find_cup_ros/CupDetectionArray.h"
+#include "find_cup_ros/CupInfo.h"
 
 using namespace Eigen;
 using namespace cv;
@@ -40,6 +41,7 @@ std::shared_ptr<image_transport::ImageTransport> it_;
 image_transport::CameraSubscriber camera_image_subscriber_; // 原始图像接收
 ros::Publisher cup_detections_publisher_; // 发布杯子pose
 ros::Subscriber camera2world_pose_subscriber_; // 接收相机到机械臂基座的变换 
+ros::Subscriber cup_info_subscriber_; // 接收并修改杯子的尺寸信息
 Eigen::Matrix3d R_camera2world_; // 相机到机械臂基座的旋转矩阵 全局变量
 Eigen::Vector3d t_camera2world_; // 相机到机械臂基座的平移向量 全局变量
 bool is_get_pose_ = false; // 是否收到相机姿态消息
@@ -271,6 +273,12 @@ void imageCallback (
 } 
 
 
+void changeCupInfoCallback(const find_cup_ros::CupInfo::ConstPtr& my_cup_info)
+{
+    cup_diameter_ = my_cup_info->diameter;
+    cup_height_ = my_cup_info->height;
+}
+
 int main(int argc, char **argv)
 {
     ros::init(argc, argv, "find_cup_ros");
@@ -292,6 +300,11 @@ int main(int argc, char **argv)
     camera2world_pose_subscriber_ =
         nh.subscribe("/camera2world", 100,
                             &camera2worldPoseCallback );
+
+    cup_info_subscriber_ =
+        nh.subscribe("/change_cup_info", 10,
+                            &changeCupInfoCallback );
+
 
     cup_detections_publisher_ =       
         nh.advertise<find_cup_ros::CupDetectionArray>("/cup_detections", 1);

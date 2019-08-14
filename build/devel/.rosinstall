@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/wpr/catkin_ws/src/find_cup_ros/build/devel/setup.sh

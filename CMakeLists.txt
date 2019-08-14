@@ -66,8 +66,10 @@ find_package(PkgConfig)
 ## Generate messages in the 'msg' folder
  add_message_files(
    FILES
+   CupInfo.msg
    CupDetection.msg
    CupDetectionArray.msg
+   
  )
 
 ## Generate services in the 'srv' folder

@@ -489,8 +489,8 @@ void multiElipseFind(cv::Mat image, vector<Ellipse> &ellsYaed)
 		Evaluate(gt, ellsYaed, fThScoreScore, res);
 
 		// Show the image in a scalable window.
-		namedWindow("Annotated Image", WINDOW_NORMAL);
-		imshow("Annotated Image", resultImage);
-		waitKey(2); 
+		// namedWindow("Annotated Image", WINDOW_NORMAL);
+		// imshow("Annotated Image", resultImage);
+		// waitKey(2); 
 	}
 }
