@@ -27,7 +27,8 @@ using namespace Eigen;
 using namespace cv;
 
 cv_bridge::CvImagePtr cv_image_; // 接收到的原始图像
-Eigen::Matrix3d camera_K_; // 相机内参
+Eigen::Matrix3d camera_left_K_; // 左目相机内参
+Eigen::Matrix3d camera_right_K_; // 右目相机内参
 cv::Mat src_left_; // 接收到的原始图像Mat格式 
 cv::Mat src_right_; // 接收到的原始图像Mat格式 
 bool is_continue_; // 是否连续接收图片
@@ -43,6 +44,12 @@ Eigen::Matrix3d R_camera2world_; // 相机到机械臂基座的旋转矩阵 全�
 Eigen::Vector3d t_camera2world_; // 相机到机械臂基座的平移向量 全局变量
 bool is_get_pose_ = false; // 是否收到相机姿态消息
 int tick_num_debug_ = 0; // 控制打印速度
+double base_line_ = 0.12; // 双目基线长度 单位：米
+
+std::vector<cv::Point2i> left_centors_;
+std::vector<cv::Point2i> right_centors_; 
+
+int detect_time_ = 100; // 检测次数
 
 /**
  * @brief Get the April Tag Option object 参数获取模板函数
@@ -70,8 +77,33 @@ T getAprilTagOption(ros::NodeHandle& pnh,
  */
 void find_cup(cv::Mat & src1, cv::Mat & src2)
 {      
-    cv::Point2i cup_center_point_left = OnImage(src1);
-    cv::Point2i cup_center_point_right = OnImage(src2);
+
+    for(int i = 0; i < detect_time_; i++)
+    {
+        left_centors_.push_back(OnImage(src1));
+        right_centors_.push_back(OnImage(src2));
+    }
+    cv::Point2i cup_center_point_left;
+    cv::Point2i cup_center_point_right;
+    for(int i = 0; i < detect_time_; i++)
+    {
+        cup_center_point_left.x += left_centors_[i].x;
+        cup_center_point_left.y += left_centors_[i].y;
+    }
+    cup_center_point_left.x = cup_center_point_left.x/detect_time_;
+    cup_center_point_left.y = cup_center_point_left.y/detect_time_;
+     
+    for(int i = 0; i < detect_time_; i++)
+    {
+        cup_center_point_right.x += right_centors_[i].x;
+        cup_center_point_right.y += right_centors_[i].y;
+    }
+    cup_center_point_right.x = cup_center_point_right.x/detect_time_;
+    cup_center_point_right.y = cup_center_point_right.y/detect_time_;
+    
+
+    left_centors_.clear();
+    right_centors_.clear();
 
     bool left_find_cup_flag = false;
     bool right_find_cup_flag = false;
@@ -80,8 +112,7 @@ void find_cup(cv::Mat & src1, cv::Mat & src2)
 
     if(cup_center_point_left.x != 0 && cup_center_point_left.y != 0) //左目存在椭圆
     {      
-        cv::circle(src1, cup_center_point_left, 3, (255,0,255),4);
-        // std::cout << K(0,0) << " " << K(0,2) << " " << K(1,1) << " " << K(1,2) << endl; 
+        cv::circle(src1, cup_center_point_left, 3, (255,0,255),4);  
         ROS_DEBUG_STREAM("cup_center_point_left.x: " << cup_center_point_left.x << "  cup_center_point_left.y: " << cup_center_point_left.y);
         namedWindow("src1", CV_WINDOW_AUTOSIZE );
         imshow("src1",src1);
@@ -102,10 +133,11 @@ void find_cup(cv::Mat & src1, cv::Mat & src2)
     if(left_find_cup_flag == true && right_find_cup_flag == true)
     {
          
-        double img_dis = (cup_center_point_right.x - cup_center_point_left.x)?(cup_center_point_right.x - cup_center_point_left.x) : (cup_center_point_left.x - cup_center_point_right.x);
-        d(2) = camera_K_(0,0); 
-         
-        ROS_DEBUG_STREAM("输出三维坐标" << d); 
+        double img_dis = (cup_center_point_right.x > cup_center_point_left.x)?(cup_center_point_right.x - cup_center_point_left.x) : (cup_center_point_left.x - cup_center_point_right.x);
+        d(2) = camera_left_K_(0,0) * base_line_ /img_dis; 
+        // d(0) = camera_left_K_(1,1) * base_line_ /img_dis; 
+        // d(1) =  
+        
         geometry_msgs::Pose cup_pose;
         //ROS发布杯子的三维坐标消息
         cup_pose.position.x = d(0);
@@ -116,7 +148,12 @@ void find_cup(cv::Mat & src1, cv::Mat & src2)
         cup_pose.orientation.z = 0;
         cup_pose.orientation.w = 1; 
         cup_detections_publisher_.publish(cup_pose); 
-    } 
+        ROS_DEBUG_STREAM("输出三维坐标" << d(2)); 
+    }
+    else
+    {
+        ROS_DEBUG_STREAM("无匹配杯子！"); 
+    }
 }
  
 
@@ -140,7 +177,16 @@ void camera2worldPoseCallback(const geometry_msgs::Pose::ConstPtr& T_camera2worl
 
     R_camera2world_ = q_camera2world.toRotationMatrix();
 
+    // namedWindow("src_left", CV_WINDOW_AUTOSIZE );
+    // imshow("src_left",src_left_);
+    // cvWaitKey(3);  
+
+    // namedWindow("src_right", CV_WINDOW_AUTOSIZE );
+    // imshow("src_right",src_right_);
+    // cvWaitKey(3);   
+    
     find_cup(src_left_, src_right_);
+
 }
 
 /**
@@ -163,20 +209,20 @@ void imageLeftCallback (
         // fy = camera_model.fy(); // focal length in camera y-direction [px]
         // cx = camera_model.cx(); // optical center x-coordinate [px]
         // cy = camera_model.cy(); // optical center y-coordinate [px]
-        fx = 608.8717041015625;  
-        fy = 608.871826171875; 
-        cx = 330.8108215332031; 
-        cy = 232.7913055419922; 
+        fx = 358.8357394580857;  
+        fy = 378.0914741121861; 
+        cx = 359.6067346577141; 
+        cy = 245.2073969486755; 
     }
     else
     {
-        fx = 610.3236694335938;  
-        fy = 610.5026245117188; 
-        cx = 313.3859558105469; 
-        cy = 237.25076293945312; 
+        fx = 358.8357394580857;  
+        fy = 378.0914741121861; 
+        cx = 359.6067346577141; 
+        cy = 245.2073969486755;  
     }
      
-    camera_K_ << fx, 0, cx, 0, fy, cy, 0, 0, 1; 
+    camera_left_K_ << fx, 0, cx, 0, fy, cy, 0, 0, 1; 
     
     // 接收图像消息
     try
@@ -220,20 +266,20 @@ void imageRightCallback (
         // fy = camera_model.fy(); // focal length in camera y-direction [px]
         // cx = camera_model.cx(); // optical center x-coordinate [px]
         // cy = camera_model.cy(); // optical center y-coordinate [px]
-        fx = 608.8717041015625;  
-        fy = 608.871826171875; 
-        cx = 330.8108215332031; 
-        cy = 232.7913055419922; 
+        fx = 363.5555066374394;  
+        fy = 376.59119993513565; 
+        cx = 363.57666510283286; 
+        cy = 236.54754812058528; 
     }
     else
     {
-        fx = 610.3236694335938;  
-        fy = 610.5026245117188; 
-        cx = 313.3859558105469; 
-        cy = 237.25076293945312; 
+        fx = 363.5555066374394;  
+        fy = 376.59119993513565; 
+        cx = 363.57666510283286; 
+        cy = 236.54754812058528; 
     }
      
-    camera_K_ << fx, 0, cx, 0, fy, cy, 0, 0, 1; 
+    camera_right_K_ << fx, 0, cx, 0, fy, cy, 0, 0, 1; 
     
     // 接收图像消息
     try

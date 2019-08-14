@@ -43,6 +43,7 @@ Eigen::Vector3d t_camera2world_; // 相机到机械臂基座的平移向量 全�
 bool is_get_pose_ = false; // 是否收到相机姿态消息
 int tick_num_debug_ = 0; // 控制打印速度
 
+
 /**
  * @brief Get the April Tag Option object 参数获取模板函数
  * 

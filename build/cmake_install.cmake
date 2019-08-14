@@ -125,6 +125,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/find_cup_ros/msg" TYPE FILE FILES
+    "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg"
     "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg"
     "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg"
     )

@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg;/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg"
+messages_str = "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg;/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg;/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg"
 services_str = ""
 pkg_name = "find_cup_ros"
 dependencies_str = "std_msgs;geometry_msgs;sensor_msgs"

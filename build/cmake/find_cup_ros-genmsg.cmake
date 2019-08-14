@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "find_cup_ros: 2 messages, 0 services")
+message(STATUS "find_cup_ros: 3 messages, 0 services")
 
 set(MSG_I_FLAGS "-Ifind_cup_ros:/home/wpr/catkin_ws/src/find_cup_ros/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg")
 
@@ -27,6 +27,11 @@ add_custom_target(_find_cup_ros_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "find_cup_ros" "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg" "geometry_msgs/Quaternion:geometry_msgs/Pose:find_cup_ros/CupDetection:std_msgs/Header:geometry_msgs/Point"
 )
 
+get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg" NAME_WE)
+add_custom_target(_find_cup_ros_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "find_cup_ros" "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -43,6 +48,12 @@ _generate_msg_cpp(find_cup_ros
   "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/find_cup_ros
+)
+_generate_msg_cpp(find_cup_ros
+  "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/find_cup_ros
 )
 
@@ -63,6 +74,8 @@ add_dependencies(find_cup_ros_generate_messages find_cup_ros_generate_messages_c
 get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg" NAME_WE)
 add_dependencies(find_cup_ros_generate_messages_cpp _find_cup_ros_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg" NAME_WE)
+add_dependencies(find_cup_ros_generate_messages_cpp _find_cup_ros_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg" NAME_WE)
 add_dependencies(find_cup_ros_generate_messages_cpp _find_cup_ros_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -86,6 +99,12 @@ _generate_msg_eus(find_cup_ros
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/find_cup_ros
 )
+_generate_msg_eus(find_cup_ros
+  "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/find_cup_ros
+)
 
 ### Generating Services
 
@@ -104,6 +123,8 @@ add_dependencies(find_cup_ros_generate_messages find_cup_ros_generate_messages_e
 get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg" NAME_WE)
 add_dependencies(find_cup_ros_generate_messages_eus _find_cup_ros_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg" NAME_WE)
+add_dependencies(find_cup_ros_generate_messages_eus _find_cup_ros_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg" NAME_WE)
 add_dependencies(find_cup_ros_generate_messages_eus _find_cup_ros_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -127,6 +148,12 @@ _generate_msg_lisp(find_cup_ros
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/find_cup_ros
 )
+_generate_msg_lisp(find_cup_ros
+  "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/find_cup_ros
+)
 
 ### Generating Services
 
@@ -145,6 +172,8 @@ add_dependencies(find_cup_ros_generate_messages find_cup_ros_generate_messages_l
 get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg" NAME_WE)
 add_dependencies(find_cup_ros_generate_messages_lisp _find_cup_ros_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg" NAME_WE)
+add_dependencies(find_cup_ros_generate_messages_lisp _find_cup_ros_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg" NAME_WE)
 add_dependencies(find_cup_ros_generate_messages_lisp _find_cup_ros_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -168,6 +197,12 @@ _generate_msg_nodejs(find_cup_ros
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/find_cup_ros
 )
+_generate_msg_nodejs(find_cup_ros
+  "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/find_cup_ros
+)
 
 ### Generating Services
 
@@ -186,6 +221,8 @@ add_dependencies(find_cup_ros_generate_messages find_cup_ros_generate_messages_n
 get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg" NAME_WE)
 add_dependencies(find_cup_ros_generate_messages_nodejs _find_cup_ros_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg" NAME_WE)
+add_dependencies(find_cup_ros_generate_messages_nodejs _find_cup_ros_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg" NAME_WE)
 add_dependencies(find_cup_ros_generate_messages_nodejs _find_cup_ros_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -209,6 +246,12 @@ _generate_msg_py(find_cup_ros
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/find_cup_ros
 )
+_generate_msg_py(find_cup_ros
+  "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/find_cup_ros
+)
 
 ### Generating Services
 
@@ -227,6 +270,8 @@ add_dependencies(find_cup_ros_generate_messages find_cup_ros_generate_messages_p
 get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg" NAME_WE)
 add_dependencies(find_cup_ros_generate_messages_py _find_cup_ros_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg" NAME_WE)
+add_dependencies(find_cup_ros_generate_messages_py _find_cup_ros_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg" NAME_WE)
 add_dependencies(find_cup_ros_generate_messages_py _find_cup_ros_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

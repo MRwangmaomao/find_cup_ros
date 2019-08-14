@@ -5,8 +5,8 @@
   <arg name="node_namespace" default="cup_find" />
   <arg name="camera_name" default="/mynteye" />
   <arg name="camera_frame" default="mynteye_link" />
-  <arg name="left_image_topic" default="left/image_raw" />
-  <arg name="right_image_topic" default="right/image_raw" />
+  <arg name="left_image_topic" default="left_rect/image_rect" />
+  <arg name="right_image_topic" default="right_rect/image_rect" />
   <arg name="is_continue" default="true" />
 
   <!-- Set parameters --> 

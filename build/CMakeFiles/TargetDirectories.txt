@@ -27,6 +27,7 @@
 /home/wpr/catkin_ws/src/find_cup_ros/build/CMakeFiles/nodelet_generate_messages_cpp.dir
 /home/wpr/catkin_ws/src/find_cup_ros/build/CMakeFiles/tf2_msgs_generate_messages_eus.dir
 /home/wpr/catkin_ws/src/find_cup_ros/build/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
+/home/wpr/catkin_ws/src/find_cup_ros/build/CMakeFiles/_find_cup_ros_generate_messages_check_deps_CupInfo.dir
 /home/wpr/catkin_ws/src/find_cup_ros/build/CMakeFiles/std_msgs_generate_messages_eus.dir
 /home/wpr/catkin_ws/src/find_cup_ros/build/CMakeFiles/roscpp_generate_messages_lisp.dir
 /home/wpr/catkin_ws/src/find_cup_ros/build/CMakeFiles/find_cup_ros_generate_messages_nodejs.dir
