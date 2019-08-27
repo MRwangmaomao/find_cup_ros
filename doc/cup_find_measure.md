@@ -21,7 +21,7 @@ roslaunch usb_cam usb_cam-test.launch （根据自己的相机驱动进行修改
 roslaunch find_cup_ros find_and_measure_cup_usbcam.launch
 ```
 
-#### 发布/camera2world消息（修改相机相对于机械臂基座坐标系的位姿关系）
+#### 发布/camera2world消息（修改相机相对于机械臂基座坐标系的位姿关系，下面只是参考，具体使用需要根据相机在机械臂上的位置以及机械臂的姿态来确定）
 
 ```
 rostopic pub /camera2world geometry_msgs/Pose "position:
@@ -34,6 +34,24 @@ orientation:
   z: 0.0
   w: 0.0"
 ```
+#### 发布/CupInfo消息（在线修改杯子的直径和高度）
+
+```
+rostopic pub /CupInfo ...
+```
+
+```
+rostopic pub /camera2world geometry_msgs/Pose "position:
+  x: 0.0
+  y: 0.0
+  z: 0.0
+orientation:
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  w: 0.0"
+```
+
 
 ### 1.3 多个杯子检测与定位
 #### 运行
@@ -148,9 +166,19 @@ detections:
 参考： [cup_find_general.md](cup_find_general.md)
 
 ### 2.2 根据图像检测到的像素直径计算实际物理直径
+ 
+u和v是像素平面，f是相机光轴。
+ 
+![ppt](img/ppt3.jpg)
 
-![1](img/cup_measure1.jpg)
+ 
+f是相机的焦距（已知）
 
-![2](img/cup_measure2.jpg)
+R是杯子的物理尺寸（已知）
 
-![3](img/cup_measure3.jpg)
+b是杯子的像素尺寸（已知）
+
+l是相机光心到杯子中心的重力方向投影的距离（已知）
+
+n轴为上图的绿色直线方向，Z轴为相机的光轴方向
+

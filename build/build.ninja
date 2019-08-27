@@ -770,34 +770,10 @@ build CMakeFiles/_find_cup_ros_generate_messages_check_deps_CupInfo: CUSTOM_COMM
   COMMAND = cd /home/wpr/catkin_ws/src/find_cup_ros/build && /home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py find_cup_ros /home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg
 
 #############################################
-# Custom command for CMakeFiles/_find_cup_ros_generate_messages_check_deps_CupDetection
-
-build CMakeFiles/_find_cup_ros_generate_messages_check_deps_CupDetection: CUSTOM_COMMAND
-  COMMAND = cd /home/wpr/catkin_ws/src/find_cup_ros/build && /home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py find_cup_ros /home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg geometry_msgs/Quaternion:geometry_msgs/Pose:geometry_msgs/Point
-
-#############################################
 # Custom command for CMakeFiles/_find_cup_ros_generate_messages_check_deps_CupDetectionArray
 
 build CMakeFiles/_find_cup_ros_generate_messages_check_deps_CupDetectionArray: CUSTOM_COMMAND
   COMMAND = cd /home/wpr/catkin_ws/src/find_cup_ros/build && /home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py find_cup_ros /home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg geometry_msgs/Quaternion:geometry_msgs/Pose:find_cup_ros/CupDetection:std_msgs/Header:geometry_msgs/Point
-
-#############################################
-# Phony custom command for CMakeFiles/find_cup_ros_generate_messages_cpp
-
-build CMakeFiles/find_cup_ros_generate_messages_cpp: phony devel/include/find_cup_ros/CupDetection.h devel/include/find_cup_ros/CupDetectionArray.h devel/include/find_cup_ros/CupInfo.h || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_cpp sensor_msgs_generate_messages_cpp std_msgs_generate_messages_cpp
-
-#############################################
-# Phony custom command for CMakeFiles/find_cup_ros_generate_messages_eus
-
-build CMakeFiles/find_cup_ros_generate_messages_eus: phony devel/share/roseus/ros/find_cup_ros/msg/CupDetection.l devel/share/roseus/ros/find_cup_ros/msg/CupDetectionArray.l devel/share/roseus/ros/find_cup_ros/msg/CupInfo.l devel/share/roseus/ros/find_cup_ros/manifest.l || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_eus sensor_msgs_generate_messages_eus std_msgs_generate_messages_eus
-
-#############################################
-# Custom command for devel/share/roseus/ros/find_cup_ros/msg/CupInfo.l
-
-build devel/share/roseus/ros/find_cup_ros/msg/CupInfo.l: CUSTOM_COMMAND /opt/ros/kinetic/lib/geneus/gen_eus.py ../msg/CupInfo.msg || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_eus sensor_msgs_generate_messages_eus std_msgs_generate_messages_eus
-  COMMAND = cd /home/wpr/catkin_ws/src/find_cup_ros/build && /home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg -Ifind_cup_ros:/home/wpr/catkin_ws/src/find_cup_ros/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -p find_cup_ros -o /home/wpr/catkin_ws/src/find_cup_ros/build/devel/share/roseus/ros/find_cup_ros/msg
-  DESC = Generating EusLisp code from find_cup_ros/CupInfo.msg
-  restat = 1
 
 #############################################
 # Custom command for devel/share/roseus/ros/find_cup_ros/manifest.l
@@ -808,12 +784,20 @@ build devel/share/roseus/ros/find_cup_ros/manifest.l: CUSTOM_COMMAND /opt/ros/ki
   restat = 1
 
 #############################################
-# Custom command for devel/include/find_cup_ros/CupDetectionArray.h
+# Custom command for CMakeFiles/_find_cup_ros_generate_messages_check_deps_CupDetection
 
-build devel/include/find_cup_ros/CupDetectionArray.h: CUSTOM_COMMAND /opt/ros/kinetic/lib/gencpp/gen_cpp.py ../msg/CupDetectionArray.msg /opt/ros/kinetic/share/geometry_msgs/msg/Quaternion.msg /opt/ros/kinetic/share/geometry_msgs/msg/Pose.msg ../msg/CupDetection.msg /opt/ros/kinetic/share/std_msgs/msg/Header.msg /opt/ros/kinetic/share/geometry_msgs/msg/Point.msg /opt/ros/kinetic/share/gencpp/msg.h.template || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_cpp sensor_msgs_generate_messages_cpp std_msgs_generate_messages_cpp
-  COMMAND = cd /home/wpr/catkin_ws/src/find_cup_ros && /home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg -Ifind_cup_ros:/home/wpr/catkin_ws/src/find_cup_ros/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -p find_cup_ros -o /home/wpr/catkin_ws/src/find_cup_ros/build/devel/include/find_cup_ros -e /opt/ros/kinetic/share/gencpp/cmake/..
-  DESC = Generating C++ code from find_cup_ros/CupDetectionArray.msg
-  restat = 1
+build CMakeFiles/_find_cup_ros_generate_messages_check_deps_CupDetection: CUSTOM_COMMAND
+  COMMAND = cd /home/wpr/catkin_ws/src/find_cup_ros/build && /home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py find_cup_ros /home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg geometry_msgs/Quaternion:geometry_msgs/Pose:geometry_msgs/Point
+
+#############################################
+# Phony custom command for CMakeFiles/find_cup_ros_generate_messages_eus
+
+build CMakeFiles/find_cup_ros_generate_messages_eus: phony devel/share/roseus/ros/find_cup_ros/msg/CupDetection.l devel/share/roseus/ros/find_cup_ros/msg/CupDetectionArray.l devel/share/roseus/ros/find_cup_ros/msg/CupInfo.l devel/share/roseus/ros/find_cup_ros/manifest.l || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_eus sensor_msgs_generate_messages_eus std_msgs_generate_messages_eus
+
+#############################################
+# Phony custom command for CMakeFiles/find_cup_ros_generate_messages_cpp
+
+build CMakeFiles/find_cup_ros_generate_messages_cpp: phony devel/include/find_cup_ros/CupDetection.h devel/include/find_cup_ros/CupDetectionArray.h devel/include/find_cup_ros/CupInfo.h || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_cpp sensor_msgs_generate_messages_cpp std_msgs_generate_messages_cpp
 
 #############################################
 # Custom command for devel/include/find_cup_ros/CupInfo.h
@@ -821,6 +805,14 @@ build devel/include/find_cup_ros/CupDetectionArray.h: CUSTOM_COMMAND /opt/ros/ki
 build devel/include/find_cup_ros/CupInfo.h: CUSTOM_COMMAND /opt/ros/kinetic/lib/gencpp/gen_cpp.py ../msg/CupInfo.msg /opt/ros/kinetic/share/gencpp/msg.h.template || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_cpp sensor_msgs_generate_messages_cpp std_msgs_generate_messages_cpp
   COMMAND = cd /home/wpr/catkin_ws/src/find_cup_ros && /home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg -Ifind_cup_ros:/home/wpr/catkin_ws/src/find_cup_ros/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -p find_cup_ros -o /home/wpr/catkin_ws/src/find_cup_ros/build/devel/include/find_cup_ros -e /opt/ros/kinetic/share/gencpp/cmake/..
   DESC = Generating C++ code from find_cup_ros/CupInfo.msg
+  restat = 1
+
+#############################################
+# Custom command for devel/include/find_cup_ros/CupDetectionArray.h
+
+build devel/include/find_cup_ros/CupDetectionArray.h: CUSTOM_COMMAND /opt/ros/kinetic/lib/gencpp/gen_cpp.py ../msg/CupDetectionArray.msg /opt/ros/kinetic/share/geometry_msgs/msg/Quaternion.msg /opt/ros/kinetic/share/geometry_msgs/msg/Pose.msg ../msg/CupDetection.msg /opt/ros/kinetic/share/std_msgs/msg/Header.msg /opt/ros/kinetic/share/geometry_msgs/msg/Point.msg /opt/ros/kinetic/share/gencpp/msg.h.template || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_cpp sensor_msgs_generate_messages_cpp std_msgs_generate_messages_cpp
+  COMMAND = cd /home/wpr/catkin_ws/src/find_cup_ros && /home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg -Ifind_cup_ros:/home/wpr/catkin_ws/src/find_cup_ros/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -p find_cup_ros -o /home/wpr/catkin_ws/src/find_cup_ros/build/devel/include/find_cup_ros -e /opt/ros/kinetic/share/gencpp/cmake/..
+  DESC = Generating C++ code from find_cup_ros/CupDetectionArray.msg
   restat = 1
 
 #############################################
@@ -834,6 +826,14 @@ build CMakeFiles/find_cup_ros_generate_messages_lisp: phony devel/share/common-l
 build devel/share/roseus/ros/find_cup_ros/msg/CupDetection.l: CUSTOM_COMMAND /opt/ros/kinetic/lib/geneus/gen_eus.py ../msg/CupDetection.msg /opt/ros/kinetic/share/geometry_msgs/msg/Quaternion.msg /opt/ros/kinetic/share/geometry_msgs/msg/Pose.msg /opt/ros/kinetic/share/geometry_msgs/msg/Point.msg || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_eus sensor_msgs_generate_messages_eus std_msgs_generate_messages_eus
   COMMAND = cd /home/wpr/catkin_ws/src/find_cup_ros/build && /home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg -Ifind_cup_ros:/home/wpr/catkin_ws/src/find_cup_ros/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -p find_cup_ros -o /home/wpr/catkin_ws/src/find_cup_ros/build/devel/share/roseus/ros/find_cup_ros/msg
   DESC = Generating EusLisp code from find_cup_ros/CupDetection.msg
+  restat = 1
+
+#############################################
+# Custom command for devel/share/roseus/ros/find_cup_ros/msg/CupInfo.l
+
+build devel/share/roseus/ros/find_cup_ros/msg/CupInfo.l: CUSTOM_COMMAND /opt/ros/kinetic/lib/geneus/gen_eus.py ../msg/CupInfo.msg || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_eus sensor_msgs_generate_messages_eus std_msgs_generate_messages_eus
+  COMMAND = cd /home/wpr/catkin_ws/src/find_cup_ros/build && /home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg -Ifind_cup_ros:/home/wpr/catkin_ws/src/find_cup_ros/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -p find_cup_ros -o /home/wpr/catkin_ws/src/find_cup_ros/build/devel/share/roseus/ros/find_cup_ros/msg
+  DESC = Generating EusLisp code from find_cup_ros/CupInfo.msg
   restat = 1
 
 #############################################
@@ -874,6 +874,11 @@ build devel/share/common-lisp/ros/find_cup_ros/msg/CupDetectionArray.lisp: CUSTO
   restat = 1
 
 #############################################
+# Phony custom command for CMakeFiles/find_cup_ros_generate_messages_py
+
+build CMakeFiles/find_cup_ros_generate_messages_py: phony devel/lib/python2.7/dist-packages/find_cup_ros/msg/_CupDetection.py devel/lib/python2.7/dist-packages/find_cup_ros/msg/_CupDetectionArray.py devel/lib/python2.7/dist-packages/find_cup_ros/msg/_CupInfo.py devel/lib/python2.7/dist-packages/find_cup_ros/msg/__init__.py || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_py sensor_msgs_generate_messages_py std_msgs_generate_messages_py
+
+#############################################
 # Custom command for devel/share/gennodejs/ros/find_cup_ros/msg/CupDetection.js
 
 build devel/share/gennodejs/ros/find_cup_ros/msg/CupDetection.js: CUSTOM_COMMAND /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py ../msg/CupDetection.msg /opt/ros/kinetic/share/geometry_msgs/msg/Quaternion.msg /opt/ros/kinetic/share/geometry_msgs/msg/Pose.msg /opt/ros/kinetic/share/geometry_msgs/msg/Point.msg || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_nodejs sensor_msgs_generate_messages_nodejs std_msgs_generate_messages_nodejs
@@ -882,19 +887,19 @@ build devel/share/gennodejs/ros/find_cup_ros/msg/CupDetection.js: CUSTOM_COMMAND
   restat = 1
 
 #############################################
-# Custom command for devel/share/gennodejs/ros/find_cup_ros/msg/CupDetectionArray.js
-
-build devel/share/gennodejs/ros/find_cup_ros/msg/CupDetectionArray.js: CUSTOM_COMMAND /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py ../msg/CupDetectionArray.msg /opt/ros/kinetic/share/geometry_msgs/msg/Quaternion.msg /opt/ros/kinetic/share/geometry_msgs/msg/Pose.msg ../msg/CupDetection.msg /opt/ros/kinetic/share/std_msgs/msg/Header.msg /opt/ros/kinetic/share/geometry_msgs/msg/Point.msg || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_nodejs sensor_msgs_generate_messages_nodejs std_msgs_generate_messages_nodejs
-  COMMAND = cd /home/wpr/catkin_ws/src/find_cup_ros/build && /home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg -Ifind_cup_ros:/home/wpr/catkin_ws/src/find_cup_ros/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -p find_cup_ros -o /home/wpr/catkin_ws/src/find_cup_ros/build/devel/share/gennodejs/ros/find_cup_ros/msg
-  DESC = Generating Javascript code from find_cup_ros/CupDetectionArray.msg
-  restat = 1
-
-#############################################
 # Custom command for devel/share/gennodejs/ros/find_cup_ros/msg/CupInfo.js
 
 build devel/share/gennodejs/ros/find_cup_ros/msg/CupInfo.js: CUSTOM_COMMAND /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py ../msg/CupInfo.msg || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_nodejs sensor_msgs_generate_messages_nodejs std_msgs_generate_messages_nodejs
   COMMAND = cd /home/wpr/catkin_ws/src/find_cup_ros/build && /home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/wpr/catkin_ws/src/find_cup_ros/msg/CupInfo.msg -Ifind_cup_ros:/home/wpr/catkin_ws/src/find_cup_ros/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -p find_cup_ros -o /home/wpr/catkin_ws/src/find_cup_ros/build/devel/share/gennodejs/ros/find_cup_ros/msg
   DESC = Generating Javascript code from find_cup_ros/CupInfo.msg
+  restat = 1
+
+#############################################
+# Custom command for devel/share/gennodejs/ros/find_cup_ros/msg/CupDetectionArray.js
+
+build devel/share/gennodejs/ros/find_cup_ros/msg/CupDetectionArray.js: CUSTOM_COMMAND /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py ../msg/CupDetectionArray.msg /opt/ros/kinetic/share/geometry_msgs/msg/Quaternion.msg /opt/ros/kinetic/share/geometry_msgs/msg/Pose.msg ../msg/CupDetection.msg /opt/ros/kinetic/share/std_msgs/msg/Header.msg /opt/ros/kinetic/share/geometry_msgs/msg/Point.msg || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_nodejs sensor_msgs_generate_messages_nodejs std_msgs_generate_messages_nodejs
+  COMMAND = cd /home/wpr/catkin_ws/src/find_cup_ros/build && /home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetectionArray.msg -Ifind_cup_ros:/home/wpr/catkin_ws/src/find_cup_ros/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -p find_cup_ros -o /home/wpr/catkin_ws/src/find_cup_ros/build/devel/share/gennodejs/ros/find_cup_ros/msg
+  DESC = Generating Javascript code from find_cup_ros/CupDetectionArray.msg
   restat = 1
 
 #############################################
@@ -912,11 +917,6 @@ build devel/lib/python2.7/dist-packages/find_cup_ros/msg/_CupDetection.py: CUSTO
   COMMAND = cd /home/wpr/catkin_ws/src/find_cup_ros/build && /home/wpr/catkin_ws/src/find_cup_ros/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/wpr/catkin_ws/src/find_cup_ros/msg/CupDetection.msg -Ifind_cup_ros:/home/wpr/catkin_ws/src/find_cup_ros/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -p find_cup_ros -o /home/wpr/catkin_ws/src/find_cup_ros/build/devel/lib/python2.7/dist-packages/find_cup_ros/msg
   DESC = Generating Python from MSG find_cup_ros/CupDetection
   restat = 1
-
-#############################################
-# Phony custom command for CMakeFiles/find_cup_ros_generate_messages_py
-
-build CMakeFiles/find_cup_ros_generate_messages_py: phony devel/lib/python2.7/dist-packages/find_cup_ros/msg/_CupDetection.py devel/lib/python2.7/dist-packages/find_cup_ros/msg/_CupDetectionArray.py devel/lib/python2.7/dist-packages/find_cup_ros/msg/_CupInfo.py devel/lib/python2.7/dist-packages/find_cup_ros/msg/__init__.py || _find_cup_ros_generate_messages_check_deps_CupDetection _find_cup_ros_generate_messages_check_deps_CupDetectionArray _find_cup_ros_generate_messages_check_deps_CupInfo geometry_msgs_generate_messages_py sensor_msgs_generate_messages_py std_msgs_generate_messages_py
 
 #############################################
 # Custom command for devel/lib/python2.7/dist-packages/find_cup_ros/msg/_CupDetectionArray.py

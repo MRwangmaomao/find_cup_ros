@@ -297,10 +297,10 @@ int main(int argc, char **argv)
   
 //   ros::console::set_logger_level(ROSCONSOLE_DEFAULT_NAME, ros::console::levels::Debug);
     ros::console::set_logger_level(ROSCONSOLE_DEFAULT_NAME, ros::console::levels::Info);
-  it_ = std::shared_ptr<image_transport::ImageTransport>(
+    it_ = std::shared_ptr<image_transport::ImageTransport>(
       new image_transport::ImageTransport(nh));
 
-  camera_image_subscriber_ =
+    camera_image_subscriber_ =
       it_->subscribeCamera("image_rect", 1,
                           &imageCallback );
 

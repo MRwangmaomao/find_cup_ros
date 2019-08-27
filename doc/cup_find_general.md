@@ -19,6 +19,9 @@ roslaunch find_cup_ros find_cup_usbcam_general.launch
 ---
 ## 2. 原理
 
+![ppt](img/ppt2.jpg)
+
+
 ### 2.1 接收图像，检测椭圆
 
 ### 2.2 根据像素坐标和相机内参计算杯子中心到相机镜头光心的方向向量

@@ -49,7 +49,11 @@ roslaunch apriltag_ros find_cup_usbcam_april.launch is_continue:=false
 
 ---
 ## 2.工作流程
- 
+
+
+
+![ppt](img/ppt1.jpg)
+
 #### 2.1找四个二维码
 
 ![找二维码](img/cup_find1.png)

@@ -24,6 +24,8 @@ catkin_make
 
 ---
 ## 3. 椭圆检测原理和方法
+ 
+[椭圆检测程序用户接口说明文档](doc/elipse_detection.md)
 
 参考博客：https://blog.csdn.net/txlqy9041/article/details/83240897
 
